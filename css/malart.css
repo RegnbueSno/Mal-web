@@ -1,0 +1,14 @@
+.malart {
+    display: inline-block;
+    width: 406px;
+}
+
+.malartcon p{
+    text-align: center;
+    
+}
+
+.malartcon {
+    position: absolute;
+    
+}

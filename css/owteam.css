@@ -1,0 +1,46 @@
+.owlogo {
+    margin-top: 20px;
+    vertical-align: middle;
+    height: 60px;
+}
+
+.owtext {
+
+    vertical-align: middle;
+}
+
+.Team-info {
+    font-family: "Roboto", sans-serif;
+    font-weight: 1000;
+    font-size: 40px;
+}
+
+.Team-info2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.owF {
+    text-align: center;
+    display: flexbox;
+    flex: 2;
+    min-width: 290px;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.712);
+    padding-bottom: 10px;
+}
+
+
+
+.owteammember {
+    margin-bottom: 5px;
+    margin-left: 40px;
+    border: solid;
+    border-color: rgb(86, 0, 136);
+    display: table;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 0px, 0px, 40px;
+}

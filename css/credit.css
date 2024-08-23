@@ -1,0 +1,12 @@
+.piccredcontainer {
+    display: inline-block;
+}
+
+.picturecred {
+    height: 100px;
+    width: 100px;
+}
+
+.credtext {
+    display: inline-block;
+}
