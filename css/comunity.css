@@ -18,3 +18,7 @@
 .quote2 {
   display: inline-flex;
 }
+
+.welcome {
+  font-family: "Roboto", sans-serif;
+}

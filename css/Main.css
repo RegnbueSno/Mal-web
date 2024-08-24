@@ -74,5 +74,6 @@ p {
 
 #LG {
     inline-size: 105px;
-    display: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
