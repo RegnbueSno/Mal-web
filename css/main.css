@@ -1,0 +1,68 @@
+@font-face {
+    font-family: October Crow;
+    src: url(../font/October\ Crow.ttf);
+}
+
+body {
+    background-image: url(../pictures/background/fire.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+p {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 100px;
+    text-align: center;
+    justify-items: center;
+    padding-top: 30px;
+    padding-bottom: 200px;
+
+}
+
+.gridDiv {
+    display: block;
+    unicode-bidi: isolate;
+    min-width: 300px;
+    color: white;
+    max-width: 100%;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+@media(min-width:1000px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width:1500px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.cred {
+    margin: 0;
+    display: inline-block;
+
+    padding-right: 20px;
+}
+
+.credcon {
+    background-color: rgba(0, 0, 0, 0.89);
+    border-radius: 0px 50px 0px 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

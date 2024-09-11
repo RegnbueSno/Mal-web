@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Overwatch;
+    src: url(../font/OVERWATCH.ttf);
+}
+
+.owtext {
+    font-family: Overwatch, Arial;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.memberpic {
+    width: 100px;
+    border-radius: 50px;
+}
+
+.teamMember{
+    display: inline-block;
+    width: 200px;
+}
