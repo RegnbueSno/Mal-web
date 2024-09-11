@@ -4,6 +4,7 @@
 }
 
 body {
+    background-color(black)
     background-image: url(../pictures/background/fire.jpg);
     background-repeat: no-repeat;
     background-size: cover;
