@@ -13,15 +13,15 @@ window.onload = function () {
     const test = document.getElementById('credImag');
     console.log(test);
     if (today == 10) {
-        pic = "pictures/Halloween.png";
+        pic = "pictures/events/monthevents/Halloween.png";
         console.log(pic);
         test.src = pic
     } else if (today == 12) {
-        pic = "pictures/Christmas.png";
+        pic = "pictures/events/monthevents/Christmas.png";
         console.log(pic);
         test.src = pic
     }
-    
+
 }
 
 
