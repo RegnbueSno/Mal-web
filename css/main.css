@@ -38,9 +38,25 @@ p {
 
 }
 
+@media(max-width:999px) {
+    .empContMain {
+        display: none;
+    }
+
+
+}
+
 @media(min-width:1000px) {
     .grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .empContMain {
+        display: none;
+    }
+
+    .empContMainUnHide {
+        display: block;
     }
 }
 
@@ -53,8 +69,17 @@ p {
         grid-column-start: span 2;
     }
 
-    .gridPhas, .empMusicGrid{
+    .gridPhas,
+    .empMusicGrid {
         grid-column-start: span 3;
+    }
+
+    .empContMain {
+        display: block;
+    }
+
+    .empContMainUnHide {
+        display: none;
     }
 
 }
