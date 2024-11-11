@@ -1,0 +1,61 @@
+.empTitle{
+    font-size: 50px;
+}
+
+.empSongTitle {
+    font-size: 30px;
+}
+
+.songImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 150px;
+    border: solid 10px rgb(0, 47, 255);
+    margin-bottom: 10px;
+}
+
+
+
+audio::-webkit-media-controls-panel{
+    background-color: rgb(0, 47, 255);
+}
+
+
+
+audio::-webkit-media-controls-play-button {
+    background-color: #8684ff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #514eff;
+}
+
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #8684ff;
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    color: #fff;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #8684ff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-timeline {
+    background-color: #8684ff;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
