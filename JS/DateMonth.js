@@ -18,15 +18,19 @@ var pic;
 console.log(birthday);
 window.onload = function () {
     const test = document.getElementById('credImag');
+    const OwMe = document.getElementById("OwTeamMe");
     if (today == 10) {
         pic = "pictures/events/monthevents/Halloween.png";
         test.src = pic
+        OwMe.src = pic
     } else if (today == 12) {
         pic = "pictures/events/monthevents/Christmas.png";
         test.src = pic
+        OwMe.src = pic
     } else if (birthday == "01-03") {
         pic = "pictures/events/birthday.png";
         test.src = pic
+        OwMe.src = pic
     }
         
 
