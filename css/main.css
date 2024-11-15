@@ -24,8 +24,7 @@ p {
     border-radius: 100px;
     padding-top: 30px;
     padding-bottom: 200px;
-    height: 100%;
-
+    bottom:0;
 }
 
 .gridDiv {
@@ -36,7 +35,6 @@ p {
     text-align: center;
     padding-left: 50px;
     padding-right: 50px;
-
 }
 
 @media(max-width:999px) {
