@@ -1,0 +1,172 @@
+@font-face {
+    font-family: October Crow;
+    src: url(../font/October\ Crow.ttf);
+}
+
+body {
+    background-color: black;
+    color: white;
+    background-image: url(../pictures/background/fire.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px;
+
+}
+
+p {
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 100px;
+    padding-top: 30px;
+    padding-bottom: 200px;
+    bottom: 0;
+}
+
+.gridDiv {
+    display: inline-block;
+    unicode-bidi: isolate;
+    min-width: 300px;
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media(max-width:999px) {
+    .empContMain {
+        display: none;
+    }
+
+
+}
+
+@media(min-width:1000px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .empContMain {
+        display: none;
+    }
+
+    .empContMainUnHide {
+        display: block;
+    }
+ 
+}
+
+@media(min-width:1500px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .gridDiv {
+        grid-column-start: span 2;
+    }
+
+    .gridPhas,
+    .empMusicGrid {
+        grid-column-start: span 3;
+    }
+
+    .empContMain {
+        display: block;
+    }
+
+    .empContMainUnHide {
+        display: none;
+    }
+
+
+
+}
+
+.cred {
+    margin: 0;
+    display: inline-block;
+
+    padding-right: 20px;
+}
+
+.credcon {
+    background-color: rgba(0, 0, 0, 0.89);
+    border-radius: 0px 50px 0px 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.900);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 60px;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.HeaderTiles {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+    align-content: center;
+    min-width: 150px;
+}
+
+.HeaderTiles a {
+    text-decoration: none;
+}
+
+.youtube {
+    position: relative;
+    display: inline-block;
+}
+
+.youtube p {
+    margin: 0;
+}
+
+.youtube>span {
+    z-index: 3;
+}
+
+.youtube:before,
+.youtube:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.youtube:before {
+    color: rgb(255, 0, 0);
+    clip: rect(0 200px 40px 45px);
+    z-index: 1;
+}
+
+.youtube:after {
+    color: rgb(241, 241, 241);
+    clip: rect(0 68px 40px 0);
+    z-index: 2;
+}
