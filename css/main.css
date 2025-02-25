@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 80px;
+    padding-top: 120px;
 
 }
 
@@ -47,7 +47,7 @@ p {
 
 @media(min-width:1500px) {
     .grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .gridDiv {
@@ -64,7 +64,7 @@ p {
 }
 
 .credcon {
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(0, 0, 0, 0.952);
     border-radius: 0px 50px 0px 0px;
 }
 
@@ -73,7 +73,7 @@ body::-webkit-scrollbar {
 }
 
 .header {
-    background-color: rgba(0, 0, 0, 0.900);
+    background-color: rgba(0, 0, 0, 0.911);
     position: fixed;
     top: 0;
     left: 0;
@@ -129,7 +129,7 @@ body::-webkit-scrollbar {
 }
 
 .youtube:before {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 0, 51);
     clip: rect(0 200px 40px 45px);
     z-index: 1;
 }
@@ -138,4 +138,8 @@ body::-webkit-scrollbar {
     color: rgb(241, 241, 241);
     clip: rect(0 68px 40px 0);
     z-index: 2;
+}
+
+.headerpicture {
+    height: 100px;
 }
