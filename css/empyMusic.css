@@ -8,6 +8,7 @@
 
 .songImg {
     display: block;
+    height:200px ;
     margin-left: auto;
     margin-right: auto;
     border-radius: 150px;
