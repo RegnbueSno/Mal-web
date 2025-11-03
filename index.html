@@ -1,182 +1,1179 @@
-<!DOCTYPE html>
-<html style="color-scheme: light;">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Malachaihemet</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author">
+    <title>MalachaiHemet | Rainbow</title>
 
-    <!-- <script src="JS/Language.js"></script> -->
+    <!-- Google Material Icons -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/podOne.css">
-    <link rel="stylesheet" href="css/artPod.css">
-    <link rel="stylesheet" href="css/owTeam.css">
-    <link rel="stylesheet" href="css/phas.css">
-    <link rel="stylesheet" href="css/empyMusic.css">
-    <link rel="icon"
-        href="https://cdn.discordapp.com/attachments/1264999770414387241/1343700780267601994/Icon_Regular_PNG.png?ex=67bee31e&is=67bd919e&hm=4aa935ca95509a4d86ff74c82ee9103379f766adae76cb8b9393cfab61d40e56&">
+    <!-- Custom styles -->
+
+    <link rel="stylesheet" href="Css/Style.css">
+    <link rel="stylesheet" href="Css/Cards.css">
+    <link rel="stylesheet" href="Css/Settings.css">
+    <link rel="stylesheet" href="Css/OverlayPopout.css">
+
+    <!-- Custom scripts -->
+
+    <script src="JS/DateMonth.js" defer></script>
+
+
+    <!-- SEO meta tags -->
+
+    <meta name="description" content="It is a page for MalachaiHemets community.">
+    <link rel="icon" href="Imgs/Logo/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
-<body oncontextmenu="return false">
+<body>
+    <nav class="site-nav">
+        <button class="sidebar-toggler">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+    </nav>
 
-    <div class="header">
-        <select style="display: none;" id="LG">
-            <option value="en">English</option>
-            <option value="pg">Português</option>
-        </select>
 
-        <div class="HeaderTiles">
-            <img class="headerpicture" src="pictures/Icon_Regular_PNG.png">
+    <div class="container">
+        <aside class="sidebar collapsed">
+            <!-- Sidebar Header -->
+            <header class="sidebar-header">
+                <img src="Imgs/Logo/Regular_PNG.png" alt="MalachaiHemet" class="header-logo">
+                <button class="sidebar-toggler">
+                    <span class="material-symbols-rounded">
+                        chevron_left
+                    </span>
+                </button>
+            </header>
+            <div class="sidebar-content">
+                <!--Search Form-->
+                <form action="#" class="search-form">
+                    <span class="material-symbols-rounded">
+                        search
+                    </span>
+                    <input type="search" placeholder="Search..." required>
+                </form>
+
+                <!--Menu List-->
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link " data-section="home">
+                            <span class="material-symbols-rounded">home</span>
+                            <span class="menu-label">Home</span>
+                        </a>
+
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="art">
+                            <span class="material-symbols-rounded">art_track</span>
+                            <span class="menu-label">Mals Art</span>
+                        </a>
+
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="music">
+                            <span class="material-symbols-rounded">library_music</span>
+                            <span class="menu-label">Community Music</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="dts">
+                            <span class="material-symbols-rounded">delivery_truck_speed</span>
+                            <span class="menu-label">Trucking Service</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="chatgames">
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="menu-label">Chat Games</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="crew">
+                            <span class="material-symbols-rounded">diversity_4</span>
+                            <span class="menu-label">Crew</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="credits">
+                            <img class="menu-picture" id="regimg" src="Imgs/RegnbueSnøCred.png" alt="Regnbue Snø">
+                            <span class="menu-label">Regnbue Snø</span>
+                        </a>
+                    </li>
+                    <li style="display: none;" class="menu-item ">
+                        <a href="#" class="menu-link" data-section="special">
+                            <span class="material-symbols-rounded">diversity_1</span>
+                            <span class="menu-label">Special Thanks</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="settings">
+                            <span class="material-symbols-rounded">settings</span>
+                            <span class="menu-label">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="theme-toggle">
+                    <div class="theme-label">
+                        <span class="theme-icon material-symbols-rounded">dark_mode</span>
+                        <span class="theme-text">Dark Mode</span>
+                    </div>
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-indicator"></div>
+                    </div>
+                </button>
+
+            </div>
+
+
+
+        </aside>
+
+        <div class="Main-content">
+            <section id="home" class="content-section active">
+                <h1>Home</h1>
+
+
+                <div style="max-width: 1000px; margin: auto; align-content: center; text-align: center;">
+                    <img style="height: 100px;" src="Imgs/Logo/Regular_PNG.png" alt="Mal Den">
+                    <h1>Welcome to our Den</h1>
+                    <p>We're more than just a community— we're a family of streamers, friends, content creators, gamers,
+                        and
+                        everything in between</p>
+                    <p>Here, we treasure our time together, believe in forming deep connections, and are committed to
+                        supporting each other through every high and low.</p>
+                    <p>Whether you're here to share your passion, make new friends,</p>
+                    <p>or just hang out, know that you've found a place where you truly belong. Dive in, get cozy, and
+                        let's
+                        make amazing memories together!</p>
+                    <div>
+                        <p style="padding-top: 20px;">Be yourself. An original is always worth more than a copy</p>
+                        <p>- Suzy Kaassem</p>
+                    </div>
+                    <div>
+                        <p style="padding-top: 20px;">Being yourself doesn't mean you stop making yourself better.
+                            It's doing so without comparing your Journey to others</p>
+                        <p>- OurMindfulLife.com</p>
+                    </div>
+                    <div>
+                        <p style="padding-top: 20px;">Dont lie, Be yourself</p>
+                        <p>- Regnbue Snø</p>
+                    </div>
+                    <div>
+                        <p style="padding-top: 20px;">We're all the same, even tho we have difrences.</p>
+                        <p>- Regnbue Snø</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Mals art-->
+            <section id="art" class="content-section">
+                <h1>Mals Art</h1>
+                <p>Art content goes here.</p>
+
+                <!-- changed code: reuse card-grid / card markup for the art section -->
+                <div class="card-grid">
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 1</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art1.jpg" alt="Artwork 1">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "Draw a rabbit"</h3>
+                            <p class="meta">This was redeemed from TK_Rita</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 2</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art2.jpg" alt="Artwork 2">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "A cactus. Home vs Desert."</h3>
+                            <p class="meta">This was redeemed from Vigilanta</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 3</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art3.png" alt="Artwork 3">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "A fox, Wearing a slytherin hat and a Harry Potter wand"</h3>
+                            <p class="meta">This was redeemed from TK_Rita</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 4</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art4.png" alt="Artwork 4">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "Mals character going up the stairs from OSRS"</h3>
+                            <p class="meta">This was redeemed from piacyrust</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 5</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art5.png" alt="Artwork 5">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "Son Goku fighting Vegeta"</h3>
+                            <p class="meta">This was redeemed from TK_Rita </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 6</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art6.png" alt="Artwork 6">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "Minions laughing at each other."</h3>
+                            <p class="meta">This was redeemed from TK_Rita </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 7</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art7.png" alt="Artwork 7">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "A Ghost"</h3>
+                            <p class="meta">This was redeemed from RogueBear86</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 8</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art8.png" alt="Artwork 8">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "The cutest bear Mal could do"</h3>
+                            <p class="meta">This was redeemed from TK_Rita</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 9</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art9.png" alt="Artwork 9">
+                        </div>
+                        <div class="card-body">
+                            <h3>Requested: "D.va"</h3>
+                            <p class="meta">This was redeemed from RogueBear86</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 10</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art10.png" alt="Artwork 10">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A whole bunch of people running away from a bear that
+                                just wants to give hugs"</h3>
+                            <p class="meta">This was redeemed from TK_Rita</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 11</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art11.png" alt="Artwork 11">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "draw a ghost hunting fox that loves to paint and bite
+                                noses so Mal took the liberty of also drawing TailorWolf"</h3>
+                            <p class="meta">This was redeemed from RogueBear86</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 12</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art12.png" alt="Artwork 12">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "a bear playing with a Ouija board"</h3>
+                            <p class="meta">This was redeemed from RogueBear86</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 13</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art13.png" alt="Artwork 13">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "a fox, a bear and a racoon in a group hug"</h3>
+                            <p class="meta">This was redeemed from RogueBear86</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 14</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art14.png" alt="Artwork 14">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested:"A Fox, a Bear and a Racoon go on a ghost hunt" </h3>
+                            <p class="meta">This was redeemed from RogueBear86
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 15</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art15.png" alt="Artwork 15">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Suprise Me (Crab Eating Fox)"</h3>
+                            <p class="meta">This was redeemed from KrioX</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 16</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art16.png" alt="Artwork 16">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A fox hugging a baby Panda"</h3>
+                            <p class="meta">This was redeemed from "TK_Rita"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 17</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art17.png" alt="Artwork 17">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A Oshawott (Pokémon) in a pool floaty"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 18</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art18.png" alt="Artwork 18">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Three bears having a picnic. One is a vampire bear,
+                                another is a ghost bear and another is a fairly bear."</h3>
+                            <p class="meta">This was redeemed from "RogueBear86"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 19</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art19.png" alt="Artwork 19">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Sailmormoon and Tuxedo Mask"</h3>
+                            <p class="meta">This was redeemed from "TK_Rita"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 20</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art20.png" alt="Artwork 20">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Phasmophobia chaos and MickeyB breaking the House's
+                                door"</h3>
+                            <p class="meta">This was redeemed from "RogueBear86"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 21</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art21.png" alt="Artwork 21">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Ash being revived and Luke Dying(The Letter)"</h3>
+                            <p class="meta">This was redeemed from "TK_Rita"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 22</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art22.png" alt="Artwork 22">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A very round orange bird, sitting on a branch"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 23</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art23.png" alt="Artwork 23">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A sacabambaspis"</h3>
+                            <p class="meta">This was redeemed from "TK_Rita"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 24</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art24.png" alt="Artwork 24">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Mal in fox mode, happy on top of a sleeping Snorlax"
+                            </h3>
+                            <p class="meta">This was redeemed from "TK_Rita"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 25</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art25.png" alt="Artwork 25">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A giant OSRS mole"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 26</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art26.png" alt="Artwork 26">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Wesker getting throat punch (in this case missile
+                                punched) in the throat"</h3>
+                            <p class="meta">This was redeemed from "RogueBear86"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 27</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art27.png" alt="Artwork 27">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "A fox with the head stuck in the snow"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 28</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art28.png" alt="Artwork 28">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Mae in her Harfest Halloween outfit"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 29</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art29.png" alt="Artwork 29">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "IceMan619 Throwing the PicoPark game"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 30</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art30.png" alt="Artwork 30">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Sample Text"</h3>
+                            <p class="meta">This was redeemed from "Sample Text"</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Community Music -->
+            <section id="music" class="content-section">
+                <h1>Community Music</h1>
+                <p>Music content by the comunity is here. (With their consent on puting it here ofc)</p>
+
+                <div class="card-grid">
+                    <article class="card popout-enabled">
+                        <div class="card-media">
+                            <img src="Imgs/Music/EmpySong.png" alt="EmpyreanDancer">
+                        </div>
+                        <div class="card-body">
+                            <h3>Where is the bone</h3>
+                            <p class="meta">EmpyreanDancer • 4:23</p>
+                            <audio class="hidden-info" preload="none" controls controlsList="nodownload">
+                                <source src="Music/Where Is The Bone.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </article>
+
+                    <article class="card popout-enabled">
+                        <div class="card-media">
+                            <img src="Imgs/Music/malachaihemetsong.jpg" alt="Track 2">
+                        </div>
+
+                        <div class="card-body">
+                            <h3>MalachaiHemet</h3>
+                            <p class="meta">RogueBear86 • 3:29</p>
+                            <audio class="hidden-info" controls controlsList="nodownload" preload="none"
+                                src="Music/Malachai.mp3">Your browser
+                                does not support the
+                                audio element.</audio>
+                        </div>
+                    </article>
+
+                    <article class="card popout-enabled">
+                        <div class="card-media">
+                            <img src="Imgs/Music/EmpySong.png" alt="Track 3">
+                        </div>
+                        <div class="card-body">
+                            <h3>Farm House (Phasmophobia version) </h3>
+                            <p class="meta">EmpyreanDancer • 3:28</p>
+                            <audio class="hidden-info" controls controlsList="nodownload" preload="none"
+                                src="Music/Farm House (Phasmo Version).mp3">Your browser does
+                                not support the
+                                audio element.</audio>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Den's Trucking Services (truck sims)-->
+            <section id="dts" class="content-section" style="max-width: 1000px; margin: auto; text-align: center;">
+                <h1>Den's Trucking Services</h1>
+                <p>Here you can find all the info about the DTS and how to join it!</p>
+                <div>
+                    <h2>About DTS</h2>
+                    <p>Den's Trucking Services (DTS) is a community dedicated to the world of trucking simulations. We
+                        offer a friendly environment for players to connect, play and compete with Trucking. This is a
+                        fun fake "company" we have made to track jobs we do as a comunity and even have a leaderboard!
+                    </p>
+
+                    <h2>How to join the "company"</h2>
+                    <p>To join Den's Trucking Services, simply go to your respective game section on this page and
+                        follow the instructions provided there.</p>
+
+                    <h2>DTS</h2>
+                    <div>
+                        <div>
+                            <h3>American Truck Simulator</h3>
+                            <p>Whenever you do a job in the game all you need to do is fill out the info in the</p>
+                            <p><a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">DTS
+                                    American Job Form</a>.
+                                This will automaticly add the job to the DTS
+                                system.</p>
+                            <p>Logging it in <a
+                                    href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">DTS
+                                    American Job Log</a>.</p>
+
+                        </div>
+                        <div>
+                            <h3>Euro Truck Simulator 2</h3>
+                            <p>Whenever you do a job in the game all you need to do is fill out the info in the</p>
+                            <p><a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">DTS
+                                    European Job Form</a>.
+                                This will automaticly add the job to the DTS
+                                system.</p>
+                            <p>Logging it in
+                                <a
+                                    href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">DTS
+                                    European Job Log</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p style="padding-top: 50px;"><a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">European
+                        DTS Reporter</a><a style="padding-left: 25px;"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">American
+                        DTS Reporter</a></p>
+                <p style="padding-top: 25px;"><a
+                        href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">DTS
+                        European Job Log</a> <a style="padding-left: 25px;"
+                        href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">DTS
+                        American Job Log</a></p>
+            </section>
+
+            <section id="chatgames" class="content-section">
+                <h1>Chat Games</h1>
+                <p>Here you will find games we have in chat on <a
+                        href="https://www.twitch.tv/malachaihemet">MalachaiHemets Twitch</a>.</p>
+
+                <div class="games-container">
+                    <h2>Botrix Duel<br><br></h2>
+                    <p>
+                        <span class="bold">Command ID:</span>
+                        2'15'20'18'9'24-4'21'5'12<br>
+                        <span class="bold">Designation:</span> Botrix Duel Protocol<br>
+                        <span class="bold">Classification:</span> PvP / System-Combat Routine<br>
+                        <span class="bold">Origin:</span> Mal Internal Combat Framework<br>
+                        <span class="bold">Status:</span> ACTIVE<br><br>
+                        <span class="bold">!bduel</span>
+                        initiates a sanctioned Botrix Duel, a system-regulated combat sequence where two
+                        operators engage through their digital combat proxies — known as Botrix Units.
+                        Each duel is governed by Mal's adaptive combat AI, ensuring no engagement is ever
+                        identical.<br>
+                        What appears as a simple command is, in truth, a live simulation of intelligence versus
+                        instinct, machine versus maker — a contest of precision and code integrity.<br><br>
+                        <span class="bold">Battle Amounts:<br> Default:</span> 10 battles<br> <span
+                            class="bold">Subs/Mods/Vips:
+                        </span>15
+                        battles<br><br>
+
+
+
+                        <span class="bold red">
+                            ⚠ System Warning<br><br>
+                            Be advised:
+                        </span>
+                        <span class="bold">Operator:</span>
+                        <span class="bold red">Regnbue Snø</span>
+                        has been <span class="red bold">flagged</span> within Mal's archives as high-risk.
+                        Repeated duels show abnormal adaptability, unpredictable response trees, and a capacity to
+                        destabilize the simulation itself.<br><br>
+                        <span class="red bold">⚠ WARNING:</span>
+                        Engaging Regnbue Snø in !bduel may result in system <span class="red bold">instability</span> or
+                        personal defeat.
+                        Proceed only if you understand what you're challenging.
+                    </p>
+
+
+
+                </div>
+                <div class="games-container">
+                    <h2>Pokemon Comunity Game<br><br></h2>
+                    <p>
+                        <span class="bold">
+                            Command ID:</span>
+                        16'15'11'5-0'7'1'13'5
+                        <br>
+                        <span class="bold">
+                            Designation:
+                        </span>
+                        Pokémon Community Interface
+                        <br>
+                        <span class="bold">
+                            Classification:
+                        </span>
+                        External Subsystem / Third-Party Integration
+                        <br>
+                        <span class="bold">
+                            Origin:
+                        </span>
+                        Independent Developer Network
+                        <br>
+                        <span class="bold">Status:</span> Integrated via Auxiliary Channel<br><br>
+
+                        <span class="bold">
+                            ⌬ Function Summary<br><br>
+                        </span>
+
+
+                        The Pokémon Community Game (PCG) bot is a third-party subsystem linked to Mal's environment
+                        through external network protocols.
+                        It enables users to capture, train, and trade data-creatures known as Pokémon — fragments of a
+                        wider universe that Mal allows to exist within controlled boundaries.<br><br>
+
+                        PCG functions as a persistent collection framework, separate from Mal's internal architecture
+                        but monitored through his observation layer.
+                        Each action — catch, duel, trade — is executed on the Pokémon Community servers, while Mal logs
+                        and translates outputs for local display.<br><br>
+
+                        <span class="bold">⌬ Integration Notes<br></span>
+
+                        Requires an active link to the Pokémon Community Game server.
+                        Mal cannot interfere with spawn rates or battle outcomes — only observe.
+
+                    </p>
+                </div>
+                <div class="games-container">
+                    <h2>Botrix Roulette<br><br></h2>
+                    <p><span class="bold">
+                            Command ID:</span>
+                        18'15'21'12'5'20'20'5
+                        <br>
+                        <span class="bold">
+                            Designation:
+                        </span>
+                        Botrix Roulette System
+                        <br>
+                        <span class="bold">
+                            Classification:
+                        </span>
+                        Probability Engine / Risk Simulation
+                        <br>
+                        <span class="bold">
+                            Origin:
+                        </span>
+                        Botrix Entertainment Subnet
+                        <br>
+                        <span class="bold">Status:</span> ACTIVE
+                        <br><br> In The Dens Casino we have roulete for those who dare take their chances. Just dont
+                        loose your soul inn it ;3 we have a Half Demon Creature in chat. so be weary.<br><br>
+
+                        !roulette triggers the Botrix Roulette protocol — a controlled gambling routine designed to
+                        simulate chance, tension, and consequence.
+                        Each execution spins the Rotational Matrix, where users wager system credits against algorithmic
+                        fate.
+                    </p>
+                </div>
+                <div class="games-container">
+                    <h2>Botrix Slot Machines<br><br>
+                    </h2>
+                    <p><span class="bold">
+                            Command ID:</span>
+                        19'12'15'20-0'13'1'3'8'9'14'5'19
+                        <br>
+                        <span class="bold">
+                            Designation:
+                        </span>
+                        Slot Machine Protocol
+                        <br>
+                        <span class="bold">
+                            Classification:
+                        </span>
+                        Visual Gamble Simulation
+                        <br>
+                        <span class="bold">
+                            Origin:
+                        </span>
+                        Botrix Subroutine — Recreation Layer
+                        <br>
+                        <span class="bold">Status:</span> ACTIVE<br><br>
+                        <span class="bold">⌬ Function Summary</span><br>
+
+                        !slots initiates a triple-reel probability display, simulating classic slot machine behavior
+                        within Mal's interface.
+                        Users input a credit amount, activate the spin, and await symbol alignment.
+
+                        Each reel is represented by system glyphs, encoded as data fragments of varying rarity.
+                    </p>
+                </div>
+                <div class="games-container">
+                    <h2>Botrix Gamble House<br><br></h2>
+                    <p><span class="bold">
+                            Command ID:</span>
+                        7'1'13'2'12'5
+                        <br>
+                        <span class="bold">
+                            Designation:
+                        </span>
+                        Botrix Gamble Protocol
+                        <br>
+                        <span class="bold">
+                            Classification:
+                        </span>
+                        Credit Wager / Probability Engine
+                        <br>
+                        <span class="bold">
+                            Origin:
+                        </span>
+                        Botrix Subsystem — Entertainment Division
+                        <br>
+                        <span class="bold">Status:</span> ACTIVE<br><br>
+                        The !gamble command activates the Botrix Micro-Wager Protocol, a condensed risk algorithm
+                        allowing operators to test their luck against the system.
+                        It is the simplest of the Botrix probability routines — fast, direct, and unforgiving.<br>
+
+                        A user offers credits. The system rolls against a fixed probability matrix to determine gain or
+                        loss.
+                        No animations, no illusions — only raw calculation.
+                    </p>
+                </div>
+
+            </section>
+            <!--<section id="chatGames" class="content-section"></section>-->
+            <!-- Credits -->
+            <section id="credits" class="content-section"
+                style="scrollbar-width: none; -ms-overflow-style: none; max-width: 1000px; margin: auto; text-align: center;">
+                <h1>Credits</h1>
+                <p>This website was made with ❤️ by a member of the community.</p>
+                <img id="regimg" style="width: 200px; border-radius: 100%; border: var(--color-text-primary), solid;"
+                    src="Imgs/RegnbueSnøCred.png" alt="Regnbue Snø">
+                <p>I am Regnbue Snø, born from the sun at a time when the universe itself began to tremble. The fabric
+                    of reality was fraying, threatened by forces too vast and subtle for most to perceive. From that
+                    growing imbalance, the Sun breathed me into being — a creature of pure light, half angel, half
+                    demon, forged to stand against the looming danger.<br> <br>
+
+                    I awoke into a world I did not understand, with no memory of why I existed and no guidance to
+                    follow. All I knew was the light that burned within me, the shadows that moved alongside it, and the
+                    instincts that pulsed through every fiber of my being. I felt warmth, love, curiosity, and an anger
+                    that could ignite without warning. I knew nothing of my purpose, only that I was.<br> <br>
+
+                    I wandered through the shifting expanse of reality, sensing the subtle frays in the universe, the
+                    places where chaos threatened to unravel life itself. Though I did not know why I existed, I could
+                    feel the weight of the imbalance pressing against me, calling me forward, shaping my every
+                    step.<br><br>
+
+                    To the kind, I am a gentle light — warmth in the cold, a calm in the storm. To the cruel, I am a
+                    force of fury — a reminder that even the brightest light can burn with unimaginable power. I act not
+                    because I was told, but because it is in my nature to respond to what threatens the harmony of
+                    existence.<br><br>
+
+                    I have learned that being whole — embracing both light and shadow, mercy and wrath, love and fear —
+                    is the first step in mending what is broken. My presence is a balance, a living counterpoint to the
+                    chaos that seeks to unravel the cosmos.<br><br>
+
+                    So when the fabric of reality shivers, when shadows stretch too far, and when warmth seems
+                    impossibly distant, know that I am near. I move where I must, not with instruction, but because I
+                    am. The Sun created me to exist, and in simply being, I am a spark against the encroaching
+                    dark.<br><br>
+
+                    I am Regnbue Snø — the light born to confront the unraveling, a being of duality standing between
+                    chaos and order, learning my purpose as I go.</p>
+
+
+            </section>
+
+            <section id="crew" class="content-section">
+                <p><span class="bold">Crew</span><br>Here you can see the crew! this includs Mods/Stream Partners </p>
+                <div style="text-align: center;">
+                    <h1>Moderators</h1>
+                    <div class="card-grid">
+                        <article id="MalachaiHemet" class="card popout-enabled">
+                            <div class="card-media">
+                                <h2>MalachaiHemet</h2>
+                                <img class="popup-image small-popout" src="Imgs/Crew/MalachaiHemet.png"
+                                    alt="MalachaiHemet">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">A kind hearted soul with inviting presence. <br>The light in
+                                    the
+                                    corner of your eye. </h3>
+                                <p class="hidden-info"> Mal is the head of the community, even tho she will say its not
+                                    about
+                                    her.<br> She is the reason this community even exists. So go show some love on her
+                                    twitch
+                                    <a target="_blank" href="https://www.twitch.tv/malachaihemet">MalachaiHemet</a>
+                                </p>
+                            </div>
+                        </article>
+                        <article id="Regnbue_Snow" class="card popout-enabled">
+                            <h2>Regnbue Snø</h2>
+                            <div class="card-media">
+
+                                <img id="regimg" class="popup-image small-popout" src="" alt="Regnbue Snø">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    "Whaaa Naaahhh I'm not obsessed with
+                                    <span class="hover-image">
+                                        Jeff
+                                        <img src="Imgs/Hover/Jeff.png" alt="Jeff">
+                                    </span>,
+                                    <span class="hover-image">
+                                        Husk
+                                        <img src="Imgs/Hover/Husk.png" alt="Husk">
+                                    </span>
+                                    nor
+                                    <span class="hover-image">
+                                        Rambley
+                                        <img src="Imgs/Hover/Rambley.png" alt="Rambley">
+                                    </span>
+                                    >w<" </h3>
+                                        <p class="hidden-info">Regnbue Snø is a freetime coder and gamer. He moderates
+                                            on Mals
+                                            Twitch and Discord! <br> He loves his friends and music. He tries to stream
+                                            every so
+                                            often. You can find him here <a target="_blank"
+                                                href="https://www.twitch.tv/regnbue_snow">Regnbue_Snow</a> </p>
+                            </div>
+                        </article>
+                        <article id="Ice_man619" class="card popout-enabled">
+                            <h2>Ice_man619</h2>
+                            <div class="card-media">
+                                <img class="popup-image small-popout" src="Imgs/Crew/IceMan.png" alt="Ice_man619">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    A tiny ice cube at heart, but big and strong on the outside.<br> "Honistly… Kinda
+                                    Easy.."
+                                </h3>
+                                <p class="hidden-info"> He is a streamer, gamer and all around goofball.<br> He
+                                    moderates on mals Twitch and Discord <br>You can find his streams
+                                    here!! <a target="_blank" href="https://www.twitch.tv/ice_man619">Ice_man619</a>
+                                </p>
+                            </div>
+                        </article>
+                        <article id="Minnieb14" class="card">
+                            <h2>Minnieb14</h2>
+                            <div class="card-media">
+                                <img class="popup-image small-popout" src="Imgs/Crew/Minnieb14.png" alt="Minnieb14">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    Our amazing mod, fearless ghost hunter, and talented emote artist who brings both
+                                    sword and sparkles to every chat with her kindness and creativity.
+                                </h3>
+                                <p class="hidden-info"> <a target="_blank" href="https://www.twitch.tv/"></a>
+                                </p>
+                            </div>
+                        </article>
+                        <article id="Rogue" class="card">
+                            <h3>RogueBear86</h3>
+                            <div class="card-media">
+                                <img class="popup-image small-popout" src="Imgs/Crew/Rogue.png" alt="RogueBear86">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    A chill, caring force with killer gaming skills, turning every match into cozy chaos
+                                    and sending ghosts running for cover!
+                                </h3>
+                                <p class="hidden-info">
+                                    <a target="_blank" href="https://twitch.tv/"></a>,
+                                </p>
+                            </div>
+                        </article>
+                        <article id="Passion" class="card">
+                            <h3>Passionuwu_smm</h3>
+                            <div class="card-media">
+                                <img class="popup-image small-popout" src="Imgs/Crew/Passion.png" alt="Passionuwu_smm">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    warm-hearted mod, always ready with a hug and a smile, spreading care and love to
+                                    help make Mal's Den the safe, happy haven it is.
+                                </h3>
+                                <p class="hidden-info">
+                                    <a target="_blank" href="https://twitch.tv/"></a>,
+                                </p>
+                            </div>
+                        </article>
+                        <article id="Piracy" class="card">
+                            <h3>Piracy</h3>
+                            <div class="card-media">
+                                <img class="popup-image" src="Imgs/Crew/Piracy.png" alt="Piracy">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="hide-in-popout">
+                                    Always ready to help, entertain, and charm, from RuneScape runs to tech troubles,
+                                    our resident hero brings skill, humor, and a flair for fun wherever they go!
+                                </h3>
+                                <p class="hidden-info">
+                                    <a target="_blank" href="https://twitch.tv/"></a>,
+                                </p>
+                            </div>
+                        </article>
+
+
+
+                    </div>
+                    <div style="text-align: center;">
+                        <h1 style="margin-top: 200px;">Vips</h1>
+                        <div class="card-grid">
+                            <article id="EmpyreanDancer" class="card popout-enabled">
+                                <h2>EmpyreanDancer</h2>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/EmpyreanDancer.png"
+                                        alt="EmpyreanDancer">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        "The water is too wet so I think it's a Mare" <br> "Your a good drawer!"
+                                    </h3>
+                                    <p class="hidden-info">
+                                        She hunts ghosts, she plays songs. have fun and suport our lovely friend
+                                        <a target="_blank"
+                                            href="https://www.twitch.tv/empyreandancer">EmpyreanDancer</a>
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="N33TZSCHE" class="card">
+                                <h2>N33TZSCHE</h2>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/n33tzsche.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hidden-in-popout"></h3>
+                                    <p class="hidden-info"></p>
+                                </div>
+                            </article>
+                            <article id="FinnFable" class="card">
+                                <h3>FinnFable</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/FinnFable.png" alt="FinnFable">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        OG of the Den, radio voice, Phasmophobia pro, and one of the most welcoming
+                                        streamers!
+                                    </h3>
+                                </div>
+                            </article>
+                            <article id="Itzfr3nchy" class="card">
+                                <h3>Itzfr3nchy</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Itzfr3nchy.png"
+                                        alt="Itzfr3nchy">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        OG of the channel ⚡ First admin, Den legend, and the reason Mal loves horror
+                                        games! 👻❤️
+                                    </h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="MadyPanda" class="card">
+                                <h3>Mady panda</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Mady.png" alt="Mady Panda">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        "I'm the backseater"
+                                    </h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="MrTeevee" class="card popout-enabled">
+                                <h3>MrTeevee</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Delta.png" alt="MrTeevee">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        OG Den friend 📺 Battlefield buff & top-tier supporter — always bringing the
+                                        hype! 🎖️
+                                    </h3>
+                                    <p class="hidden-info">Our lovely Tv Master
+                                        <a target="_blank" href="https://twitch.tv/mrteevee">MrTeevee</a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="Neo" class="card ">
+                                <h3>Neovilete</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Neo.png" alt="Neovilete">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">"Vai Fazer download da tua tia!!!"</h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="Sekayra" class="card">
+                                <h3>Sekayra</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Sekayra.png" alt="Sekayra">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout"></h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="TK" class="card ">
+                                <h3>TK_Rita</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/TK.png" alt="TK_Rita">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        Our Light of Hope and Survival Expert Extraordinaire! Whether stopping Mal from
+                                        mass bunny crimes or keeping everyone alive, TK's always there to save the day
+                                        or die 46 times.
+                                    </h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="Tyr" class="card">
+                                <h3>Tyr2134</h3>
+                                <div class="card-media">
+                                    <img class="popup-image small-popout" src="Imgs/Crew/Tyr.png" alt="Tyr2134">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        The Greatest of Tyr's Valor and Glory has come!
+                                        wait let me edit, forgot people
+                                    </h3>
+                                    <p class="hidden-info">
+                                        <a target="_blank" href="https://twitch.tv/"></a>,
+                                    </p>
+                                </div>
+                            </article>
+                            <article id="Night Owl" class="card">
+                                <h3>Night Owl
+                                </h3>
+                                <div class="card-media">
+                                    <img class="popup-image" src="Imgs/Crew/NightOwl.png" alt="Night Owl">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="hide-in-popout">
+                                        Music maestro 🎵🦉 Loved by the Den for his humor; we miss his silly self when
+                                        he's away! 💜
+                                    </h3>
+                                </div>
+                            </article>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section style="text-align: center;" class="content-section" id="special">
+                <h1> Special Thanks </h1>
+                <div class="card-grid">
+                    <article style="margin:0 auto;" class="card">
+                        <img id="regimg" style=" border-radius: 100%; border: solid var(--color-text-primary);" alt="">
+                    </article>
+
+
+                </div>
+                <p></p>
+            </section>
+
+            <section id="settings" class="content-section">
+                <h1><span class="material-symbols-rounded" style="font-size: 25px;">settings</span>Settings</h1>
+                <p>Here you can adjust your settings<br><br></p>
+
+                <div>
+                    <p>This will reset any settings and theme types stored in local storage<br>ONLY deletes Local
+                        Storage for this website</p>
+                    <button id="resetSettings">Reset Local Storage</button>
+                </div>
+
+            </section>
+
         </div>
-
-        <div class="HeaderTiles">
-            <a style="color: #ffffff;" href="https://linktr.ee/malachaihemet" target="_blank">All links can be found here! Linktree</a>
-        </div>
-
-        
-
-
-
+    </div>
+    <!-- Universal Overlay -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlayContent"></div>
     </div>
 
 
-
-    <div class="grid">
-        <div class="gridDiv gridMain">
-
-            <img style="height: 150px;" class="malImg" src="pictures/Regular_PNG.png" alt="">
-            <p class="welcome_text_title">
-                Welcome to our Den
-            </p>
-            <p class="welcome_text">We're more than just a community— we're a family of streamers, friends, content
-                creators, gamers, and
-                everything in
-                between</p>
-            <p class="welcome_text">Here, we treasure our time together, believe in forming deep connections, and are
-                committed to supporting
-                each other
-                through every high and low.</p>
-            <p class="welcome_text">Whether you're here to share your passion, make new friends,</p>
-            <p class="welcome_text">or just hang out, know that you've found a place where you truly belong. Dive in,
-                get cozy, and let's
-                make amazing
-                memories together!</p>
-            <div class="quotes">
-                <p>Be yourself. An original is always worth more than a copy</p>
-                <p>- Suzy Kaassem</p>
-            </div>
-            <div class="quotes">
-                <p>Being yourself doesn't mean you stop making yourself better.</p>
-                <p>It's doing so without comparing your Journey to others</p>
-                <p>- OurMindfulLife.com</p>
-            </div>
-
-            <div class="quotes">
-                <p>Dont lie, Be yourself</p>
-                <p>- Regnbue Snø</p>
-            </div>
-
-            <div class="quotes">
-                <p>We're all the same, even tho we have difrences.</p>
-                <p>- Regnbue Snø</p>
-            </div>
-
-        </div>
-
-
-
-        <div class="gridDiv gridArt">
-            <p>Mals Art</p>
-            <img class="art" src="pictures/malart/art1.png">
-            <img class="art" src="pictures/malart/art2.png">
-            <img class="art" src="pictures/malart/art3.png">
-            <img class="art" src="pictures/malart/art4.png">
-            <img class="art" src="pictures/malart/art5.png">
-            <img class="art" src="pictures/malart/art6.png">
-            <img class="art" src="pictures/malart/art7.png">
-            <img class="art" src="pictures/malart/art8.png">
-            <img class="art" src="pictures/malart/art9.png">
-
-        </div>
-
-
-
-        <div class="gridDiv gridPhas">
-
-            <p class="phasT">Phasmophobia</p>
-            <p class="phasT">Fears</p>
-            <div>
-                <p class="phasfear">Regnbue Snø</p>
-                <p class="phasfear phast">- The Twins</p>
-            </div>
-            <div>
-                <p class="phasfear">EmpyreanDancer</p>
-                <p class="phasfear phast">- Revenant</p>
-            </div>
-
-            <div>
-                <p class="phasfear">RogueBear</p>
-                <p class="phasfear phast">- Revs / Demons</p>
-            </div>
-            <div>
-                <p class="phasfear">Mal</p>
-                <p class="phasfear phast">- Revs / Demons</p>
-            </div>
-
-
-        </div>
-
-        <div class="gridDiv empMusicGrid">
-            <div class="empContMain" style="text-align: center;">
-                <p class="empTitle phasT">EmpyreanDancer</p>
-                <img class="songImg" src="pictures/EmpySong.png">
-                <p class="empSongTitle phasT"> Farm House - Phasmophobia Version </p>
-                <audio class="song" controls controlsList="nodownload">
-                    <source src="music/Farm House (Phasmo Version).mp3" type="audio/mpeg">
-                </audio>
-                <p class="empSongTitle phasT"> Where is the bone </p>
-                <audio class="song" controls controlsList="nodownload">
-                    <source src="music/Where is the bone.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-
-        </div>
-        <div class="empContMain" style="text-align: center;">
-            <p class="empTitle phasT">Rogue</p>
-            <img class="songImg" src="pictures/owteam/rogue.jpg">
-            <p class="empSongTitle phasT"> Tribute to the Den & Mal </p>
-            <audio class="song" controls controlsList="nodownload">
-                <source src="music/Malachai.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </div>
-
-    <!-- <div class="gridDiv"></div> -->
-    </div>
-    <div style="position: fixed; bottom: 0; left: 0;">
-        <div class="credcon">
-            <img id="credImag" style="width: 100px;" src="pictures/TailHuggs.png">
-            <div class="cred">
-                <p><a target="_blank" href="https://www.twitch.tv/malachaihemet">Malachaihemet</a></p>
-                <p style="margin: 0;">For the comunity</p>
-                <p style="margin: 0;">Made by <a target="_blank" href="https://www.twitch.tv/regnbue_snow">Regnbue
-                        Snø</a>
-                    using VSCode</p>
-            </div>
-        </div>
-
-
-        <div style="position: fixed; bottom: 0; right: 10px;">
-            <p>Background can be found <a target="_blank"
-                    href="https://4kwallpapers.com/abstract/fire-dark-15331.html">here</a></p>
-        </div>
-    </div>
+    <script defer src="JS/script.js"></script>
+    <script defer src="JS/Cards.js"></script>
 </body>
-<script src="JS/DateMonth.js"></script>
 
 </html>
