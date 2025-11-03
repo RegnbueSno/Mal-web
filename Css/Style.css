@@ -538,6 +538,10 @@ h3 {
 
     }
 
+    .header-logo {
+        width: 200px;
+    }
+
     .sidebar.collapsed .sidebar-header .sidebar-toggler {
         height: 80px;
         width: 80px;
