@@ -401,6 +401,10 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator {
     /* optional slight zoom */
 }
 
+.site-nav {
+    background-color: var(--color-bg-primary);
+}
+
 p {
     font-size: 30px;
 }
