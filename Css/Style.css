@@ -403,6 +403,7 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator {
 
 .site-nav {
     background-color: var(--color-bg-primary);
+    z-index: 2;
 }
 
 p {
