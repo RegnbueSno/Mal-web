@@ -90,6 +90,9 @@ if (themeToggleBtn) {
 const menuLinks = document.querySelectorAll(".menu-link");
 const contentSections = document.querySelectorAll(".content-section");
 
+// Track if animation is in progress
+let isAnimating = false;
+
 function waitForTransition(el, timeout = 500) {
     return new Promise(resolve => {
         if (!el) return resolve();
@@ -126,6 +129,13 @@ async function showSection(id) {
 menuLinks.forEach(link => {
     link.addEventListener("click", async (e) => {
         e.preventDefault();
+
+        // Block clicks during animation
+        if (isAnimating) {
+            return;
+        }
+
+        isAnimating = true;
         menuLinks.forEach(l => l.classList.remove("active"));
         link.classList.add("active");
         const sectionId = link.dataset.section;
@@ -133,6 +143,9 @@ menuLinks.forEach(link => {
             localStorage.setItem("active-section", sectionId);
             await showSection(sectionId);
         }
+
+        // Re-enable clicks after animation completes
+        isAnimating = false;
     });
 });
 
