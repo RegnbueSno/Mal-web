@@ -44,6 +44,20 @@ li {
     margin-bottom: 5px;
 }
 
+.version-badge {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 999;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    user-select: none;
+}
 
 body.dark-theme {
     --color-text-primary: #F1F5F9;

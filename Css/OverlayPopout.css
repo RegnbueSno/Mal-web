@@ -117,7 +117,7 @@
 /* Max height for images in music section popup */
 #music .overlay-content img,
 .overlay-content #music img {
-    max-height: 250px;
+    height: 250px;
     /* adjust this value as needed */
     width: auto;
     object-fit: contain;
