@@ -90,8 +90,10 @@ if (themeToggleBtn) {
 const menuLinks = document.querySelectorAll(".menu-link");
 const contentSections = document.querySelectorAll(".content-section");
 
-// Track if animation is in progress
-let isAnimating = false;
+// Track current active link to prevent race conditions
+let currentActiveLink = null;
+let lastClickTime = 0;
+const CLICK_COOLDOWN = 600; // milliseconds
 
 function waitForTransition(el, timeout = 500) {
     return new Promise(resolve => {
@@ -122,6 +124,7 @@ async function showSection(id) {
     }
 
     target.classList.add("active");
+    console.log(`[WEB]: Changed to "${id}"`);
     await Promise.resolve();
 }
 
@@ -129,23 +132,46 @@ async function showSection(id) {
 menuLinks.forEach(link => {
     link.addEventListener("click", async (e) => {
         e.preventDefault();
+        e.stopImmediatePropagation(); // Stop other handlers from firing
 
-        // Block clicks during animation
-        if (isAnimating) {
+        // Check if clicking the same link that's already active
+        if (currentActiveLink === link) {
+            console.log(`[WEB]: Already on "${link.dataset.section}"`);
             return;
         }
 
-        isAnimating = true;
+        const now = Date.now();
+        const timeSinceLastClick = now - lastClickTime;
+
+        // Block clicks during cooldown period - don't modify anything
+        if (timeSinceLastClick < CLICK_COOLDOWN) {
+            console.log(`[WEB]: Navigation blocked - cooldown active (${CLICK_COOLDOWN - timeSinceLastClick}ms remaining)`);
+            return; // Exit completely without changing any classes
+        }
+
+        // Update timestamp immediately
+        lastClickTime = now;
+
+        // Disable all menu links physically
+        menuLinks.forEach(l => l.style.pointerEvents = "none");
+
+        // Store current active link
+        currentActiveLink = link;
+
+        // Update visuals synchronously BEFORE async operations
         menuLinks.forEach(l => l.classList.remove("active"));
         link.classList.add("active");
+
         const sectionId = link.dataset.section;
         if (sectionId) {
             localStorage.setItem("active-section", sectionId);
             await showSection(sectionId);
         }
 
-        // Re-enable clicks after animation completes
-        isAnimating = false;
+        // Re-enable clicks after cooldown
+        setTimeout(() => {
+            menuLinks.forEach(l => l.style.pointerEvents = "");
+        }, CLICK_COOLDOWN);
     });
 });
 
