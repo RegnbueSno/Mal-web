@@ -57,6 +57,7 @@ li {
     z-index: 999;
     box-shadow: 0 2px 8px var(--color-shadow);
     user-select: none;
+    display: block !important;
 }
 
 body.dark-theme {
