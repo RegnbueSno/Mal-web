@@ -2,7 +2,7 @@
     "version": "2.51.1",
     "type": "patch",
     "build": {
-        "number": 42,
+        "number": 45,
         "dateISO": "2025-12-26T00:00:00Z",
         "commit": "b96b5d0",
         "branch": "Main"
