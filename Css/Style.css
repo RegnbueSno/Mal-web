@@ -10,10 +10,29 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
 button {
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
-    padding: 3px 5px 3px 5px;
+    padding: 3px 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 p span.bold {
@@ -143,11 +162,11 @@ textarea::placeholder {
     padding: 12px 15px;
     border-radius: 8px;
     color: var(--color-text-primary);
-    transition: 0.3s ease;
+    transition: color 0.3s ease, background 0.3s ease;
 }
 
 .menu-list .menu-label {
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 
@@ -166,7 +185,7 @@ textarea::placeholder {
 
 .theme-toggle .theme-label .theme-text {
     font-size: 1rem;
-    transition: opacity 0.4s 0.2s ease;
+    transition: opacity 0.3s ease;
 }
 
 .theme-toggle .theme-toggle-track {
@@ -176,7 +195,7 @@ textarea::placeholder {
     border-radius: 999px;
     margin-left: auto;
     background: #c3d1ec;
-    transition: opacity 0.4s 0.2s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 body.dark-theme .theme-toggle .theme-toggle-track {
@@ -234,10 +253,10 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator {
     transform: translateY(8px) scale(0.995);
     pointer-events: none;
     visibility: hidden;
-    transition: opacity .32s ease, transform .32s ease, visibility .32s;
+    transition: opacity 0.32s ease, transform 0.32s ease, visibility 0.32s;
     display: block;
-    /* keep in flow for height calculation of parent if needed */
     overflow: auto;
+    will-change: opacity, transform;
 }
 
 /* active section fades/slides in and is interactive */
@@ -255,7 +274,6 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator {
 .card img:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transform: scale(1.02);
-    /* optional slight zoom */
 }
 
 p {
@@ -312,57 +330,46 @@ h3 {
     }
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 769px) and (max-width: 1499px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* ✅ two columns */
     }
 }
 
-@media (max-width: 2500px) {
+@media (min-width: 1500px) and (max-width: 1999px) {
     .card-grid {
         grid-template-columns: repeat(3, 1fr);
-        /* ✅ three columns */
     }
 }
 
 @media (min-width: 1500px) {
-
-
     .material-symbols-rounded {
         font-size: 50px;
-        transition: font-size 0.5s ease;
     }
 
     .menu-picture {
         width: 50px;
-        transition: width 0.5s ease;
     }
 
     .menu-label {
         font-size: 25px;
-        transition: font-size 0.5s ease;
     }
 }
 
 @media (min-width: 2000px) {
-
     .header-logo {
         width: 200px;
     }
 
     .material-symbols-rounded {
         font-size: 75px;
-        transition: font-size 0.5s ease;
     }
 
     .menu-picture {
         width: 75px;
-        transition: width 0.5s ease;
     }
 
     .menu-label {
         font-size: 30px;
-        transition: font-size 0.5s ease;
     }
 }

@@ -42,14 +42,12 @@
     border-radius: 12px;
     text-align: center;
     margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .music-file {
     margin-top: 25px;
-
 }
-
-
 
 .card:hover {
     transform: translateY(-5px);
@@ -58,23 +56,15 @@
 
 
 .card img {
+    width: 100%;
+    height: auto;
     max-width: 500px;
     border-radius: 10px;
-}
-
-.card img {
-    width: 100%;
-    /* ✅ fills card width */
-    height: auto;
-    /* ✅ maintains aspect ratio */
-    border-radius: 10px;
     object-fit: cover;
-    /* ✅ crops image nicely */
 }
 
 .card h3 {
     font-size: clamp(1rem, 2vw, 1.4rem);
-    /* scales with screen */
     margin: 10px 0;
 }
 
@@ -129,7 +119,6 @@
     width: 160px;
     border-radius: 8px;
     pointer-events: none;
-    /* ensures the hover doesn't flicker */
 }
 
 .hover-image:hover img {

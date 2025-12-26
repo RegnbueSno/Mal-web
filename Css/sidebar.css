@@ -26,8 +26,9 @@
 
 .sidebar-header .header-logo {
     width: 135px;
-    height: 46px;
-    object-fit: cover;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
     display: block;
     transition: opacity 0.4s ease;
 }
@@ -155,7 +156,7 @@
 .sidebar.collapsed .theme-toggle :where(.theme-text, .theme-toggle-track) {
     width: 0;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: opacity 0.2s ease, width 0.2s ease;
 }
 
 .site-nav .sidebar-toggler {
@@ -186,8 +187,6 @@
 @media (min-width: 1500px) {
     .sidebar.collapsed {
         width: 120px;
-        transition: width 0.5s ease;
-
     }
 
     .sidebar-header .sidebar-toggler,
@@ -197,29 +196,22 @@
     }
 
     .sidebar-header .sidebar-toggler span {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .sidebar {
         width: 375px;
-        transition: width 0.5s ease;
-    }
-
-    .sidebar-header .sidebar-toggler span {
-        font-size: 3.5rem;
     }
 }
 
 @media (min-width: 2000px) {
     .sidebar.collapsed {
         width: 150px;
-        transition: width 0.5s ease;
-
     }
+    
     .sidebar.collapsed .sidebar-header .sidebar-toggler {
         height: 80px;
         width: 80px;
-
     }
 
     .sidebar-header .sidebar-toggler span {
@@ -228,7 +220,5 @@
 
     .sidebar {
         width: 450px;
-        transition: width 0.5s ease;
     }
-    
 }

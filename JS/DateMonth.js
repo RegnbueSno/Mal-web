@@ -26,14 +26,19 @@ window.onload = function () {
 
     if (today == 10) {
         picReg = "Imgs/Events/Monthly/Halloween.png";
+        console.log("Halloween image selected");
     } else if (today == 12) {
         picReg = "Imgs/Events/Monthly/Christmas.png";
+        console.log("Christmas image selected");
     } else if (birthday == "01-03") {
         picReg = "Imgs/Events/Birthday.png";
+        console.log("Birthday image selected");
     } else if (birthday == "17-05") {
         picReg = "Imgs/Events/17thmay.png";
+        console.log("17th May image selected");
     } else {
         picReg = "Imgs/Crew/RegnbueSnø.png";
+        console.log("Default image selected");
     }
 
     regImgs.forEach((img, index) => {

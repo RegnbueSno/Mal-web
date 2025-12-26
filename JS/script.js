@@ -38,11 +38,10 @@ overlay.addEventListener("click", (e) => {
 
 // ===== Theme icon update =====
 const updateThemeIcon = () => {
-    const isDark = document.body.classList.contains("dark-theme");
     if (!themeIcon || !sidebar) return;
-    themeIcon.textContent = sidebar.classList.contains("collapsed")
-        ? (isDark ? "light_mode" : "dark_mode")
-        : "dark_mode";
+    const isDark = document.body.classList.contains("dark-theme");
+    const isCollapsed = sidebar.classList.contains("collapsed");
+    themeIcon.textContent = (isCollapsed && isDark) ? "light_mode" : "dark_mode";
 };
 
 // ===== Image theme swap =====
@@ -182,9 +181,7 @@ if (initial && initial.dataset.section) showSection(initial.dataset.section);
 // live filter + enter-to-navigate for search
 if (searchForm) {
     const searchInput = searchForm.querySelector('input');
-    const menuItems = Array.from(document.querySelectorAll('.menu-item'));
-    const menuLinksArray = Array.from(document.querySelectorAll('.menu-link'));
-
+    const menuItems = document.querySelectorAll('.menu-item');
     const normalize = s => (s || '').trim().toLowerCase();
 
     const clearFilter = () => {
@@ -194,43 +191,36 @@ if (searchForm) {
 
     const filterMenu = (q) => {
         if (!q) return clearFilter();
-        if (sidebar && sidebar.classList.contains('collapsed')) sidebar.classList.remove('collapsed');
+        if (sidebar?.classList.contains('collapsed')) sidebar.classList.remove('collapsed');
 
-        let any = false;
+        let hasMatch = false;
         menuItems.forEach(li => {
             const link = li.querySelector('.menu-link');
-            const label = normalize((link?.dataset.section || '') + ' ' + (link?.textContent || ''));
-            const matches = label.includes(q);
+            const text = normalize(`${link?.dataset.section || ''} ${link?.textContent || ''}`);
+            const matches = text.includes(q);
             li.style.display = matches ? '' : 'none';
-            if (matches) any = true;
+            if (matches) hasMatch = true;
         });
-        searchForm.classList.toggle('no-result', !any);
+        searchForm.classList.toggle('no-result', !hasMatch);
     };
 
     const findBestMatch = (q) => {
         if (!q) return null;
         q = normalize(q);
-        let match = menuLinksArray.find(l =>
-            (l.dataset.section && normalize(l.dataset.section) === q) ||
-            normalize(l.textContent) === q
+        return Array.from(menuLinks).find(l =>
+            normalize(l.dataset.section) === q || normalize(l.textContent) === q
+        ) || Array.from(menuLinks).find(l =>
+            normalize(l.dataset.section).includes(q) || normalize(l.textContent).includes(q)
         );
-        if (!match) {
-            match = menuLinksArray.find(l =>
-                (l.dataset.section && normalize(l.dataset.section).includes(q)) ||
-                normalize(l.textContent).includes(q)
-            );
-        }
-        return match || null;
     };
 
     const doSearch = () => {
-        const q = normalize(searchInput.value);
-        const match = findBestMatch(q);
+        const match = findBestMatch(searchInput.value);
         if (match) {
             match.click();
+            searchInput.value = '';
             searchInput.blur();
             clearFilter();
-            searchInput.value = '';
         } else {
             searchForm.classList.add('no-result');
             setTimeout(() => searchForm.classList.remove('no-result'), 900);
@@ -265,15 +255,13 @@ if (!hasVisited) {
 
 // Collapse sidebar when clicking outside
 document.addEventListener("click", (e) => {
-    const isClickInsideSidebar = sidebar.contains(e.target);
-    const isClickOnToggle = Array.from(sidebarToggleBtn).some(btn => btn.contains(e.target));
-    const isClickOnSearch = searchForm && searchForm.contains(e.target);
+    const isOutsideClick = !sidebar.contains(e.target) &&
+        !Array.from(sidebarToggleBtn).some(btn => btn.contains(e.target)) &&
+        !(searchForm?.contains(e.target));
 
-    if (!isClickInsideSidebar && !isClickOnToggle && !isClickOnSearch) {
-        if (!sidebar.classList.contains("collapsed")) {
-            sidebar.classList.add("collapsed");
-            updateThemeIcon();
-        }
+    if (isOutsideClick && !sidebar.classList.contains("collapsed")) {
+        sidebar.classList.add("collapsed");
+        updateThemeIcon();
     }
 });
 
