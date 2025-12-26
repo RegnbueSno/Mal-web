@@ -42,8 +42,10 @@
 
 .site-nav .sidebar-toggler,
 .sidebar-header .sidebar-toggler {
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
     border: none;
     position: absolute;
     right: 18px;
@@ -58,8 +60,10 @@
 }
 
 .sidebar.collapsed .sidebar-header .sidebar-toggler {
-    height: 48px;
-    width: 50px;
+    min-height: 48px;
+    min-width: 50px;
+    max-height: 48px;
+    max-width: 50px;
     transform: translateX(-2px)
 }
 
@@ -69,16 +73,12 @@
 }
 
 .sidebar-header .sidebar-toggler span {
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 1.75rem, 2rem);
     transition: transform 0.4s ease;
 }
 
 .sidebar.collapsed .sidebar-toggler span {
     transform: rotate(180deg);
-}
-
-.sidebar-header .sidebar-toggler span {
-    font-size: 1.75rem;
 }
 
 .sidebar .sidebar-content {
