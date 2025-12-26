@@ -130,11 +130,11 @@ async function showSection(id) {
 // attach handlers
 menuLinks.forEach(link => {
     link.addEventListener("click", async (e) => {
-        e.preventDefault();
         // Allow external links (e.g., report bug) to bypass SPA handler
         if (link.dataset.external === 'true') {
             return;
         }
+        e.preventDefault();
         e.stopImmediatePropagation(); // Stop other handlers from firing
 
         // Check if clicking the same link that's already active
