@@ -1,9 +1,8 @@
 {
-    "version": "2.52.0",
+    "version": "2.52.4",
     "type": "patch",
     "build": {
-        "number": 350,
-        "dateISO": "2025-12-26T00:00:00Z",
+        "number": 351,
         "commit": "b96b5d0",
         "branch": "Main"
     },
