@@ -1,8 +1,8 @@
 {
-    "version": "2.52.4",
+    "version": "2.52.5",
     "type": "patch",
     "build": {
-        "number": 351,
+        "number": 352,
         "commit": "b96b5d0",
         "branch": "Main"
     },
