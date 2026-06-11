@@ -373,3 +373,11 @@ h3 {
         font-size: 30px;
     }
 }
+
+html {
+    overflow:hidden;
+}
+
+body {
+    overflow: hidden;
+}
