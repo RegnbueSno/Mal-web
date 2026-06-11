@@ -11,7 +11,7 @@
     <!-- Google Material Icons -->
 
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
 
     <!-- Custom styles -->
 
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="Css/Settings.css">
     <link rel="stylesheet" href="Css/OverlayPopout.css">
     <link rel="stylesheet" href="Css/sidebar.css">
+    <link rel="stylesheet" href="Css/Links.css">
+    <link rel="stylesheet" href="Css/notification.css">
 
     <!-- Custom scripts -->
 
@@ -34,6 +36,11 @@
 </head>
 
 <body>
+    <div id="custom-notification" class="notification">
+        <p id="notification-message"></p>
+    </div>
+
+
     <div class="version-badge"></div>
     <nav class="site-nav">
         <button class="sidebar-toggler">
@@ -89,8 +96,8 @@
                     </li>
                     <li class="menu-item">
                         <a href="#" class="menu-link" data-section="dts">
-                            <span class="material-symbols-rounded">delivery_truck_speed</span>
-                            <span class="menu-label">Trucking Service</span>
+                            <span class="material-symbols-rounded">linked_services</span>
+                            <span class="menu-label">Initiatives</span>
                         </a>
                     </li>
                     <li class="menu-item">
@@ -105,6 +112,20 @@
                             <span class="menu-label">Crew</span>
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link" data-section="links">
+                            <span class="material-symbols-rounded">partner_exchange</span>
+                            <span class="menu-label">Links</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item" style="display:none;">
+                        <a href="#" class="menu-link" data-section="game-partnership">
+                            <span class="material-symbols-rounded">diversity_2</span>
+                            <span class="menu-label">Game Partnerships</span>
+                        </a>
+                    </li>
+
                     <li class="menu-item">
                         <a href="#" class="menu-link" data-section="ftv">
                             <img class="menu-picture" src="Imgs/Logo/FTV.png" alt="For The Vibes">
@@ -144,7 +165,7 @@
                     </li>
                     <li class="menu-item">
                         <a href="#" class="menu-link" data-config-link="reportBug" data-external="true" target="_blank"
-                            rel="noopener">
+                           rel="noopener">
                             <span class="material-symbols-rounded">bug_report</span>
                             <span class="menu-label">Report a Bug</span>
                         </a>
@@ -167,29 +188,37 @@
         </aside>
 
         <div class="Main-content">
-            <section id="home" class="content-section active">
+            <Main id="home" class="content-section active">
                 <h1>Home</h1>
 
 
                 <div style="max-width: 1000px; margin: auto; align-content: center; text-align: center;">
                     <img id="malsLogo" style="height: 100px;" src="Imgs/Logo/Regular_PNG.png" alt="Mal Den">
                     <h1>Welcome to our Den</h1>
-                    <p>We're more than just a community— we're a family of streamers, friends, content creators, gamers,
+                    <p>
+                        We're more than just a community— we're a family of streamers, friends, content creators, gamers,
                         and
-                        everything in between</p>
-                    <p>Here, we treasure our time together, believe in forming deep connections, and are committed to
-                        supporting each other through every high and low.</p>
+                        everything in between
+                    </p>
+                    <p>
+                        Here, we treasure our time together, believe in forming deep connections, and are committed to
+                        supporting each other through every high and low.
+                    </p>
                     <p>Whether you're here to share your passion, make new friends,</p>
-                    <p>or just hang out, know that you've found a place where you truly belong. Dive in, get cozy, and
+                    <p>
+                        or just hang out, know that you've found a place where you truly belong. Dive in, get cozy, and
                         let's
-                        make amazing memories together!</p>
+                        make amazing memories together!
+                    </p>
                     <div>
                         <p style="padding-top: 20px;">Be yourself. An original is always worth more than a copy</p>
                         <p>- Suzy Kaassem</p>
                     </div>
                     <div>
-                        <p style="padding-top: 20px;">Being yourself doesn't mean you stop making yourself better.
-                            It's doing so without comparing your Journey to others</p>
+                        <p style="padding-top: 20px;">
+                            Being yourself doesn't mean you stop making yourself better.
+                            It's doing so without comparing your Journey to others
+                        </p>
                         <p>- OurMindfulLife.com</p>
                     </div>
                     <div>
@@ -202,10 +231,66 @@
                     </div>
                 </div>
 
-            </section>
+            </Main>
+
+            <partnership id="game-partnership" class="content-section">
+                <container>
+                    <img src="Imgs/Logo/Farlight84.png" style="height: 100px;" alt="Farlight 84 Logo" class="partnership-logo">
+                    <h1></h1>
+
+                </container>
+            </partnership>
+
+            <Links id="links" class="content-section">
+                <group>
+                    <h2>Information</h2>
+                    <p>¤ Schedule: <a href="https://www.twitch.tv/malachaihemet_/schedule" target="_blank">View Schedule</a></p>
+                </group>
+
+                <group>
+                    <h2>Other Social Content</h2>
+                    <socials>
+                        <p>¤ Linktree: <a href="https://linktr.ee/malachahemet" target="_blank">View Linktree</a></p>
+                        <p>¤ Twitch: <a href="https://www.twitch.tv/malachahemet_" target="_blank">View Twitch</a></p>
+                        <p>¤ Youtube: <a href="https://www.youtube.com/@malachaihemet" target="_blank">View Youtube</a></p>
+                        <p>¤ TikTok: <a href="https://www.tiktok.com/@malachaihemet" target="_blank">View TikTok</a></p>
+                        <p>¤ Instagram: <a href="https://www.instagram.com/malachaihemet" target="_blank">View Instagram</a></p>
+                        <p>¤ Twitter: <a href="https://x.com/malachaihemet" target="_blank">View Twitter</a></p>
+                    </socials>
+                </group>
+                <group>
+                    <h2>Partnerships</h2>
+                    <links>
+                        <p>¤ Fanatical: <a href="https://www.fanatical.com/en/?ref=malachaihemet" target="_blank">View Fanatical</a></p>
+                        <grouped>
+                            <p>¤ Victor Game Studio: <a href="https://victorgamestudio.com/en/" target="_blank">View Victor Game Studio</a></p>
+                            <p class="under-text">- Use code MALACHAIHEMET for 25% off</p>
+                        </grouped>
+                        <grouped>
+                            <p>¤ Dubby: <a href="https://www.dubby.gg/discount/MALACHAIHEMET?ref=ezmqiuim" target="_blank">View Dubby</a></p>
+                            <p class="under-text">- Use code MALACHAIHEMET for 10% off</p>
+                        </grouped>
+                        <grouped>
+                            <p>¤ Blacklyte: <a href="https://blacklyte.com/malachaihemet" target="_blank">View Blacklyte</a></p>
+                            <p class="under-text">- Use code MALACHAIHEMET for 15% off</p>
+                        </grouped>
+                    </links>
+                </group>
+                <group>
+                    <h2>Suporting Mal</h2>
+                    <links>
+                        <p>¤ Throne: <a href="https://throne.com/malachaihemet" target="_blank">View Throne</a> </p>
+                        <p>¤ Ko-Fi: <a href="https://ko-fi.com/malachaihemet" target="_blank">View Ko-Fi</a></p>
+                        <p>¤ Store: <a href=" https://malachaihemet-shop.fourthwall.com/en-eur" target="_blank">View Store</a></p>
+                    </links>
+
+                </group>
+
+
+            </Links>
 
             <!-- Mals art-->
-            <section id="art" class="content-section">
+            <Art id="art" class="content-section">
                 <h1>Mals Art</h1>
                 <p>Art content goes here.</p>
 
@@ -311,8 +396,10 @@
                             <img class="popup-image" src="Imgs/malsArt/Art10.png" alt="Artwork 10">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "A whole bunch of people running away from a bear that
-                                just wants to give hugs"</h3>
+                            <h3 class="card-header">
+                                Requested: "A whole bunch of people running away from a bear that
+                                just wants to give hugs"
+                            </h3>
                             <p class="meta">This was redeemed from TK_Rita</p>
                         </div>
                     </article>
@@ -322,8 +409,10 @@
                             <img class="popup-image" src="Imgs/malsArt/Art11.png" alt="Artwork 11">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "draw a ghost hunting fox that loves to paint and bite
-                                noses so Mal took the liberty of also drawing TailorWolf"</h3>
+                            <h3 class="card-header">
+                                Requested: "draw a ghost hunting fox that loves to paint and bite
+                                noses so Mal took the liberty of also drawing TailorWolf"
+                            </h3>
                             <p class="meta">This was redeemed from RogueBear86</p>
                         </div>
                     </article>
@@ -354,7 +443,8 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-header">Requested:"A Fox, a Bear and a Racoon go on a ghost hunt" </h3>
-                            <p class="meta">This was redeemed from RogueBear86
+                            <p class="meta">
+                                This was redeemed from RogueBear86
                             </p>
                         </div>
                     </article>
@@ -394,8 +484,10 @@
                             <img class="popup-image" src="Imgs/malsArt/Art18.png" alt="Artwork 18">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "Three bears having a picnic. One is a vampire bear,
-                                another is a ghost bear and another is a fairly bear."</h3>
+                            <h3 class="card-header">
+                                Requested: "Three bears having a picnic. One is a vampire bear,
+                                another is a ghost bear and another is a fairly bear."
+                            </h3>
                             <p class="meta">This was redeemed from "RogueBear86"</p>
                         </div>
                     </article>
@@ -415,8 +507,10 @@
                             <img class="popup-image" src="Imgs/malsArt/Art20.png" alt="Artwork 20">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "Phasmophobia chaos and MickeyB breaking the House's
-                                door"</h3>
+                            <h3 class="card-header">
+                                Requested: "Phasmophobia chaos and MickeyB breaking the House's
+                                door"
+                            </h3>
                             <p class="meta">This was redeemed from "RogueBear86"</p>
                         </div>
                     </article>
@@ -456,7 +550,8 @@
                             <img class="popup-image" src="Imgs/malsArt/Art24.png" alt="Artwork 24">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "Mal in fox mode, happy on top of a sleeping Snorlax"
+                            <h3 class="card-header">
+                                Requested: "Mal in fox mode, happy on top of a sleeping Snorlax"
                             </h3>
                             <p class="meta">This was redeemed from "TK_Rita"</p>
                         </div>
@@ -477,8 +572,10 @@
                             <img class="popup-image" src="Imgs/malsArt/Art26.png" alt="Artwork 26">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "Wesker getting throat punch (in this case missile
-                                punched) in the throat"</h3>
+                            <h3 class="card-header">
+                                Requested: "Wesker getting throat punch (in this case missile
+                                punched) in the throat"
+                            </h3>
                             <p class="meta">This was redeemed from "RogueBear86"</p>
                         </div>
                     </article>
@@ -518,15 +615,173 @@
                             <img class="popup-image" src="Imgs/malsArt/Art30.png" alt="Artwork 30">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-header">Requested: "Sample Text"</h3>
-                            <p class="meta">This was redeemed from "Sample Text"</p>
+                            <h3 class="card-header">Requested: "Emma Frost ulting but she is a sexy piece of toast"</h3>
+                            <p class="meta">This was redeemed from "Sekayra"</p>
                         </div>
                     </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 31</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art31.png" alt="Artwork 31">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Rogue and Mal hunting ghosts"</h3>
+                            <p class="meta">This was redeemed from "RogiBear86"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 32</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art32.png" alt="Artwork 32">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "venture kicking Widow's ass"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 33</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art33.png" alt="Artwork 33">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">
+                                Requested: "Mal opening a chest expecting glorious rewards but surprised to find a mimic
+                                instead"
+                            </h3>
+                            <p class="meta">This was redeemed from "RinTheKitsuneVT"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 34</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art34.png" alt="Artwork 34">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Venture moleing it"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 35</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art35.png" alt="Artwork 35">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "himself, me, TK, and Reg twirling on ice skates in pico park 2"</h3>
+                            <p class="meta">This was redeemed from "IceMan619"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 36</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art36.png" alt="Artwork 36">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Mal achiveing Masters in Farlight 84"</h3>
+                            <p class="meta">This was redeemed from "superspy291"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 37</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art37.png" alt="Artwork 37">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Venture playing Minecraft!"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 38</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art38.png" alt="Artwork 38">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Minecraft World"</h3>
+                            <p class="meta">This was redeemed from "RogiBear86"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 39</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art39.png" alt="Artwork 39">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "FOX on a hot air baloon with friends"</h3>
+                            <p class="meta">This was redeemed from "RogiBear86"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 40</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art40.png" alt="Artwork 40">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "Hanzo and his Dragons"</h3>
+                            <p class="meta">This was redeemed from "RogiBear86"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 41</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art41.png" alt="Artwork 41">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "chef fox serving pizza"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 42</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art42.png" alt="Artwork 42">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">Requested: "birthday fox partying with gin and tonic"</h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-media">
+                            <h3>Artwork 43</h3>
+                            <img class="popup-image" src="Imgs/malsArt/Art43.png" alt="Artwork 43">
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="card-header">
+                                Requested: "ben (the thing) sitting on the toilet reading his news paper, with deadpool
+                                looking at him through his bathroom window"
+                            </h3>
+                            <p class="meta">This was redeemed from "Mady panda"</p>
+                        </div>
+                    </article>
+
                 </div>
-            </section>
+            </Art>
 
             <!-- Community Music -->
-            <section id="music" class="content-section">
+            <Music id="music" class="content-section">
                 <h1>Community Music</h1>
                 <p>Music content by the comunity is here. (With their consent on puting it here ofc)</p>
 
@@ -540,9 +795,11 @@
                             <h3>Where is the bone</h3>
                             <p class="meta">EmpyreanDancer • 4:23</p>
                             <audio class="hidden-info" controls controlsList="nodownload" preload="none"
-                                src="Music/Where is the bone.mp3">Your browser
+                                   src="Music/Where is the bone.mp3">
+                                Your browser
                                 does not support the
-                                audio element.</audio>
+                                audio element.
+                            </audio>
                         </div>
                     </article>
 
@@ -555,9 +812,11 @@
                             <h3>MalachaiHemet</h3>
                             <p class="meta">RogueBear86 • 3:29</p>
                             <audio class="hidden-info" controls controlsList="nodownload" preload="none"
-                                src="Music/Malachai.mp3">Your browser
+                                   src="Music/Malachai.mp3">
+                                Your browser
                                 does not support the
-                                audio element.</audio>
+                                audio element.
+                            </audio>
                         </div>
                     </article>
 
@@ -569,9 +828,11 @@
                             <h3>Farm House (Phasmophobia version) </h3>
                             <p class="meta">EmpyreanDancer • 3:28</p>
                             <audio class="hidden-info" controls controlsList="nodownload" preload="none"
-                                src="Music/Farm House (Phasmo Version).mp3">Your browser does
+                                   src="Music/Farm House (Phasmo Version).mp3">
+                                Your browser does
                                 not support the
-                                audio element.</audio>
+                                audio element.
+                            </audio>
                         </div>
                     </article>
 
@@ -583,9 +844,11 @@
                             <h3>Malachai Hemet </h3>
                             <p class="meta">RogueBear86 • 2:10</p>
                             <audio class="hidden-info" controls controlsList="nodownload" preload="none"
-                                src="Music/Malachai Hemet.mp3">Your browser does
+                                   src="Music/Malachai Hemet.mp3">
+                                Your browser does
                                 not support the
-                                audio element.</audio>
+                                audio element.
+                            </audio>
                         </div>
                     </article>
 
@@ -594,87 +857,133 @@
                             <img src="Imgs/Music/EmpySong.png" alt="Track 3">
                         </div>
                         <div class="card-body">
-                            <h3>Farm House (Phasmophobia version) </h3>
+                            <h3>Dirt In The Water </h3>
                             <p class="meta">EmpyreanDancer • 5:32</p>
                             <audio class="hidden-info" controls controlsList="nodownload" preload="none"
-                                src="Music/Dirt In The Water.mp3">Your browser does
+                                   src="Music/Dirt In The Water.mp3">
+                                Your browser does
                                 not support the
-                                audio element.</audio>
+                                audio element.
+                            </audio>
+                        </div>
+                    </article>
+                    <article class="card popout-enabled">
+                        <div class="card-media">
+                            <img src="Imgs/Music/EmpySong.png" alt="Track 3">
+                        </div>
+                        <div class="card-body">
+                            <h3>Speed Dayan</h3>
+                            <p class="meta">EmpyreanDancer • 4:03</p>
+                            <audio class="hidden-info" controls controlsList="nodownload" preload="none" src="Music/Speed Dayan.mp3">
+                                Your browser does
+                                not support the
+                                audio element.
+                            </audio>
                         </div>
                     </article>
                 </div>
-            </section>
+            </Music>
 
             <!-- Den's Trucking Services (truck sims)-->
-            <section id="dts" class="content-section" style="max-width: 1000px; margin: auto; text-align: center;">
+            <Initiatives id="dts" class="content-section" style="max-width: 1000px; margin: auto; text-align: center;">
                 <h1>Den's Trucking Services</h1>
                 <p>Here you can find all the info about the DTS and how to join it!</p>
                 <div>
                     <h2>About DTS</h2>
-                    <p>Den's Trucking Services (DTS) is a community dedicated to the world of trucking simulations. We
+                    <p>
+                        Den's Trucking Services (DTS) is a community dedicated to the world of trucking simulations. We
                         offer a friendly environment for players to connect, play and compete with Trucking. This is a
                         fun fake "company" we have made to track jobs we do as a comunity and even have a leaderboard!
                     </p>
 
                     <h2>How to join the "company"</h2>
-                    <p>To join Den's Trucking Services, simply go to your respective game section on this page and
-                        follow the instructions provided there.</p>
+                    <p>
+                        To join Den's Trucking Services, simply go to your respective game section on this page and
+                        follow the instructions provided there.
+                    </p>
 
                     <h2>DTS</h2>
                     <div>
                         <div>
                             <h3>American Truck Simulator</h3>
                             <p>Whenever you do a job in the game all you need to do is fill out the info in the</p>
-                            <p><a data-config-link="dtsForm"
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">DTS
-                                    American Job Form</a>.
+                            <p>
+                                <a data-config-link="dtsForm"
+                                   href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">
+                                    DTS
+                                    American Job Form
+                                </a>.
                                 This will automaticly add the job to the DTS
-                                system.</p>
-                            <p>Logging it in <a data-config-link="dtsLog"
-                                    href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">DTS
-                                    American Job Log</a>.</p>
+                                system.
+                            </p>
+                            <p>
+                                Logging it in <a data-config-link="dtsLog"
+                                                 href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">
+                                    DTS
+                                    American Job Log
+                                </a>.
+                            </p>
 
                         </div>
                         <div>
                             <h3>Euro Truck Simulator 2</h3>
                             <p>Whenever you do a job in the game all you need to do is fill out the info in the</p>
-                            <p><a data-config-link="dtsFormETS2"
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">DTS
-                                    European Job Form</a>.
+                            <p>
+                                <a data-config-link="dtsFormETS2"
+                                   href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">
+                                    DTS
+                                    European Job Form
+                                </a>.
                                 This will automaticly add the job to the DTS
-                                system.</p>
-                            <p>Logging it in
+                                system.
+                            </p>
+                            <p>
+                                Logging it in
                                 <a data-config-link="dtsLogETS2"
-                                    href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">DTS
-                                    European Job Log</a>.
+                                   href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">
+                                    DTS
+                                    European Job Log
+                                </a>.
                             </p>
                         </div>
                     </div>
                 </div>
-                <p style="padding-top: 50px;"><a data-config-link="dtsReporterEU"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">European
-                        DTS Reporter</a><a style="padding-left: 25px;" data-config-link="dtsReporterUS"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">American
-                        DTS Reporter</a></p>
-                <p style="padding-top: 25px;"><a data-config-link="dtsLogETS2"
-                        href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">DTS
-                        European Job Log</a> <a style="padding-left: 25px;" data-config-link="dtsLogATS"
-                        href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">DTS
-                        American Job Log</a></p>
-            </section>
+                <p style="padding-top: 50px;">
+                    <a data-config-link="dtsReporterEU"
+                       href="https://docs.google.com/forms/d/e/1FAIpQLScsXNzKvhv_Ro8YS7oFTyLEGTzLPMg1S0SkQMPdxki1S25kAA/viewform">
+                        European
+                        DTS Reporter
+                    </a><a style="padding-left: 25px;" data-config-link="dtsReporterUS"
+                           href="https://docs.google.com/forms/d/e/1FAIpQLScRpWObhIfhArPirn-71qBtRSvvT0-ELdorlaU-WDSN3jsehw/viewform">
+                        American
+                        DTS Reporter
+                    </a>
+                </p>
+                <p style="padding-top: 25px; padding-bottom:200px;">
+                    <a data-config-link="dtsLogETS2"
+                       href="https://docs.google.com/spreadsheets/d/1mB2gd41Nl38K9ek2lDu6fCM_lzDahZb6M1tplL2TH_w/edit?gid=8754252">
+                        DTS
+                        European Job Log
+                    </a> <a style="padding-left: 25px;" data-config-link="dtsLogATS"
+                            href="https://docs.google.com/spreadsheets/d/1NmxLZ0tTjEHqRdw7JkUsAtmuHq-v9yWr0mqVWv-pb4Y/edit?gid=846388718">
+                        DTS
+                        American Job Log
+                    </a>
+                </p>
+            </Initiatives>
 
-
-
-            <section id="chatgames" class="content-section">
+            <ChatGames id="chatgames" class="content-section">
                 <h1>Chat Games</h1>
-                <p>Here you will find games we have in chat on <a
-                        href="https://www.twitch.tv/malachaihemet">MalachaiHemets Twitch</a>.</p>
+                <p>
+                    Here you will find games we have in chat on <a href="https://www.twitch.tv/malachaihemet">MalachaiHemets Twitch</a>.
+                </p>
 
                 <div class="games-container">
                     <h2>Pokemon Comunity Game<br><br></h2>
                     <p>
                         <span class="bold">
-                            Command ID:</span>
+                            Command ID:
+                        </span>
                         16'15'11'5-0'7'1'13'5
                         <br>
                         <span class="bold">
@@ -716,26 +1025,28 @@
 
                     </p>
                 </div>
-            </section>
+            </ChatGames>
             <!--<section id="" class="content-section"></section>-->
-
             <!-- Credits -->
-            <section id="credits" class="content-section"
-                style="scrollbar-width: none; -ms-overflow-style: none; max-width: 1000px; margin: auto; text-align: center;">
+            <Credits id="credits" class="content-section"
+                     style="scrollbar-width: none; -ms-overflow-style: none; max-width: 1000px; margin: auto; text-align: center;">
                 <h1>Credits</h1>
                 <p>This website was made with ❤️ by a member of the community.</p>
-                <p>my fursona is Regnbue Snø, so I thought it would be fun to write a little bit about him here! and
+                <p>
+                    my fursona is Regnbue Snø, so I thought it would be fun to write a little bit about him here! and
                     give
                     you the story im working on for him! <a style="font-weight: 700;"
-                        href="https://www.dropbox.com/scl/fi/1h5o8mo63jetzyxrpdfll/Regnbue-Sn.pdf?rlkey=k00ebthqkzalw44fkzvgv3dvh&st=h03ov82m&dl=1">
-                        RegnbueSnø's Story So Far</a>
-                    <br>Be warned it does not get updated often. only whenever have the
+                                                            href="https://www.dropbox.com/scl/fi/1h5o8mo63jetzyxrpdfll/Regnbue-Sn.pdf?rlkey=k00ebthqkzalw44fkzvgv3dvh&st=h03ov82m&dl=1">
+                        RegnbueSnø's Story So Far
+                    </a>
+                    <br>Be warned it does not get updated often. only whenever I have the
                     creativity and motivation!<br>
                 </p>
                 <img id="regimg" style="width: 200px; border-radius: 100%; border: var(--color-text-primary), solid;"
-                    src="Imgs/RegnbueSnøCred.png" alt="Regnbue Snø">
+                     src="Imgs/RegnbueSnøCred.png" alt="Regnbue Snø">
 
-                <p>I am Regnbue Snø, born from the sun at a time when the universe itself began to tremble. The fabric
+                <p>
+                    I am Regnbue Snø, born from the sun at a time when the universe itself began to tremble. The fabric
                     of reality was fraying, threatened by forces too vast and subtle for most to perceive. From that
                     growing imbalance, the Sun breathed me into being — a creature of pure light, half angel, half
                     demon, forged to stand against the looming danger.<br> <br>
@@ -765,13 +1076,14 @@
                     dark.<br><br>
 
                     I am Regnbue Snø — the light born to confront the unraveling, a being of duality standing between
-                    chaos and order, learning my purpose as I go.</p>
+                    chaos and order, learning my purpose as I go.
+                </p>
 
 
-            </section>
+            </Credits>
 
             <!-- Crew -->
-            <section id="crew" class="content-section">
+            <Crew id="crew" class="content-section">
                 <p><span class="bold">Crew</span><br>Here you can see the crew! this includs Mods/Stream Partners </p>
                 <div style="text-align: center;">
                     <h1>Moderators!</h1>
@@ -780,13 +1092,16 @@
                             <div class="card-media">
                                 <h2>MalachaiHemet</h2>
                                 <img class="popup-image small-popout" src="Imgs/Crew/MalachaiHemet.png"
-                                    alt="MalachaiHemet">
+                                     alt="MalachaiHemet">
                             </div>
                             <div class="card-body">
-                                <h3 class="hide-in-popout">A kind hearted soul with inviting presence. <br>The light in
+                                <h3 class="hide-in-popout">
+                                    A kind hearted soul with inviting presence. <br>The light in
                                     the
-                                    corner of your eye. </h3>
-                                <p class="hidden-info"> Mal is the head of the community, even tho she will say its not
+                                    corner of your eye.
+                                </h3>
+                                <p class="hidden-info">
+                                    Mal is the head of the community, even tho she will say its not
                                     about
                                     her.<br> She is the reason this community even exists. So go show some love on her
                                     twitch
@@ -816,13 +1131,16 @@
                                         Rambley
                                         <img src="Imgs/Hover/Rambley.png" alt="Rambley">
                                     </span>
-                                    >w<" </h3>
-                                        <p class="hidden-info">Regnbue Snø is a freetime coder and gamer. He moderates
-                                            on Mals
-                                            Twitch and Discord! <br> He loves his friends and music. He tries to stream
-                                            every so
-                                            often. You can find him here <a target="_blank"
-                                                href="https://www.twitch.tv/regnbue_snow">Regnbue_Snow</a> </p>
+                                    >w<"
+                                </h3>
+                                <p class="hidden-info">
+                                    Regnbue Snø is a freetime coder and gamer. He moderates
+                                    on Mals
+                                    Twitch and Discord! <br> He loves his friends and music. He tries to stream
+                                    every so
+                                    often. You can find him here <a target="_blank"
+                                                                    href="https://www.twitch.tv/regnbue_snow">Regnbue_Snow</a>
+                                </p>
                             </div>
                         </article>
                         <article id="Ice_man619" class="card popout-enabled">
@@ -835,23 +1153,10 @@
                                     A tiny ice cube at heart, but big and strong on the outside.<br> "Honistly… Kinda
                                     Easy.."
                                 </h3>
-                                <p class="hidden-info"> He is a streamer, gamer and all around goofball.<br> He
+                                <p class="hidden-info">
+                                    He is a streamer, gamer and all around goofball.<br> He
                                     moderates on mals Twitch and Discord <br>You can find his streams
                                     here!! <a target="_blank" href="https://www.twitch.tv/ice_man619">Ice_man619</a>
-                                </p>
-                            </div>
-                        </article>
-                        <article id="Minnieb14" class="card">
-                            <h2>Minnieb14</h2>
-                            <div class="card-media">
-                                <img class="popup-image small-popout" src="Imgs/Crew/Minnieb14.png" alt="Minnieb14">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="hide-in-popout">
-                                    Our amazing mod, fearless ghost hunter, and talented emote artist who brings both
-                                    sword and sparkles to every chat with her kindness and creativity.
-                                </h3>
-                                <p class="hidden-info"> <a target="_blank" href="https://www.twitch.tv/"></a>
                                 </p>
                             </div>
                         </article>
@@ -901,9 +1206,8 @@
                             </div>
                         </article>
 
-
-
                     </div>
+
                     <div style="text-align: center;">
                         <h1 style="margin-top: 200px;">Vips!</h1>
                         <div class="card-grid">
@@ -911,7 +1215,7 @@
                                 <h2>EmpyreanDancer</h2>
                                 <div class="card-media">
                                     <img class="popup-image small-popout" src="Imgs/Crew/EmpyreanDancer.png"
-                                        alt="EmpyreanDancer">
+                                         alt="EmpyreanDancer">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="hide-in-popout">
@@ -920,7 +1224,7 @@
                                     <p class="hidden-info">
                                         She hunts ghosts, she plays songs. have fun and suport our lovely friend
                                         <a target="_blank"
-                                            href="https://www.twitch.tv/empyreandancer">EmpyreanDancer</a>
+                                           href="https://www.twitch.tv/empyreandancer">EmpyreanDancer</a>
                                     </p>
                                 </div>
                             </article>
@@ -940,7 +1244,7 @@
                                 <h3>Itzfr3nchy</h3>
                                 <div class="card-media">
                                     <img class="popup-image small-popout" src="Imgs/Crew/Itzfr3nchy.png"
-                                        alt="Itzfr3nchy">
+                                         alt="Itzfr3nchy">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="hide-in-popout">
@@ -976,7 +1280,8 @@
                                         OG Den friend 📺 Battlefield buff & top-tier supporter — always bringing the
                                         hype! 🎖️
                                     </h3>
-                                    <p class="hidden-info">Our lovely Tv Master
+                                    <p class="hidden-info">
+                                        Our lovely Tv Master
                                         <a target="_blank" href="https://twitch.tv/mrteevee">MrTeevee</a>,
                                     </p>
                                 </div>
@@ -1036,7 +1341,8 @@
                                 </div>
                             </article>
                             <article id="Night Owl" class="card">
-                                <h3>Night Owl
+                                <h3>
+                                    Night Owl
                                 </h3>
                                 <div class="card-media">
                                     <img class="popup-image" src="Imgs/Crew/NightOwl.png" alt="Night Owl">
@@ -1064,7 +1370,8 @@
                                     </div>
                                     <div class="card-body">
                                         <h3 class="hidden-in-popout"></h3>
-                                        <p class="hidden-info">Follow them here ->>
+                                        <p class="hidden-info">
+                                            Follow them here ->>
                                             <a target="_blank" href="https://www.twitch.tv/N33TZSCHE">N33TZSCHE</a>
                                         </p>
                                     </div>
@@ -1073,7 +1380,7 @@
                                     <h3>RogueBear86</h3>
                                     <div class="card-media">
                                         <img class="popup-image small-popout" src="Imgs/Crew/Rogue.png"
-                                            alt="RogueBear86">
+                                             alt="RogueBear86">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="hide-in-popout">
@@ -1081,7 +1388,8 @@
                                             cozy chaos
                                             and sending ghosts running for cover!
                                         </h3>
-                                        <p class="hidden-info">Follow them here ->>
+                                        <p class="hidden-info">
+                                            Follow them here ->>
                                             <a target="_blank" href="https://twitch.tv/RogueBear86">RogueBear86</a>,
                                         </p>
                                     </div>
@@ -1090,7 +1398,7 @@
                                     <h2>EmpyreanDancer</h2>
                                     <div class="card-media">
                                         <img class="popup-image small-popout" src="Imgs/Crew/EmpyreanDancer.png"
-                                            alt="EmpyreanDancer">
+                                             alt="EmpyreanDancer">
                                     </div>
                                     <div class="card-body">
                                         <h3 class="hide-in-popout">
@@ -1099,7 +1407,7 @@
                                         <p class="hidden-info">
                                             Follow them here ->>
                                             <a target="_blank"
-                                                href="https://www.twitch.tv/empyreandancer">EmpyreanDancer</a>
+                                               href="https://www.twitch.tv/empyreandancer">EmpyreanDancer</a>
                                         </p>
                                     </div>
                                 </article>
@@ -1113,7 +1421,8 @@
                                             OG Den friend 📺 Battlefield buff & top-tier supporter — always bringing the
                                             hype! 🎖️
                                         </h3>
-                                        <p class="hidden-info">Follow them here ->>
+                                        <p class="hidden-info">
+                                            Follow them here ->>
                                             <a target="_blank" href="https://twitch.tv/mrteevee">MrTeevee</a>,
                                         </p>
                                     </div>
@@ -1123,10 +1432,10 @@
                     </div>
 
                 </div>
-            </section>
+            </Crew>
 
             <!-- Special Thanks -->
-            <section id="special" style="text-align: center;" class="content-section">
+            <Special id="special" style="text-align: center;" class="content-section">
                 <h1> Special Thanks </h1>
                 <div class="card-grid">
                     <article style="margin:0 auto;" class="card">
@@ -1136,49 +1445,57 @@
 
                 </div>
                 <p></p>
-            </section>
+            </Special>
 
             <!-- Settings -->
-            <section id="settings" class="content-section">
+            <Settings id="settings" class="content-section">
                 <h1><span class="material-symbols-rounded" style="font-size: 25px;">settings</span>Settings</h1>
                 <p>Here you can adjust your settings<br><br></p>
 
                 <div>
-                    <p>This will reset any settings and theme types stored in local storage<br>ONLY deletes Local
-                        Storage for this website</p>
+                    <p>
+                        This will reset any settings and theme types stored in local storage<br>ONLY deletes Local
+                        Storage for this website
+                    </p>
                     <button id="resetSettings">Reset Local Storage</button>
                 </div>
 
-            </section>
+            </Settings>
 
             <!-- For The Vibes -->
-            <section id="ftv" class="content-section">
+            <ForTheVibes id="ftv" class="content-section">
                 <div style="display: inline-block;">
                     <h1>For The Vibes</h1>
                     <img src="Imgs/TwitchBanner.png" alt="for the vibes banner" style="height: 275px;">
-                    <p>This is a streaming team!<br>
+                    <p>
+                        This is a streaming team!<br>
                         We aim to create a positive and inclusive space for both streamers and hero shooter enthusiasts,
                         fostering a community where everyone can feel welcome and supported. <br><br>
                         In this group we have a discord for creators to collaborate and plan events together!<br>
                         If you wish to apply to join the discord wether you are a hero shooter enthusiast or a streamer
                         who
                         sometimes play hero shooters, you can apply here -> <a target="_blank"
-                            href="https://docs.google.com/document/d/1Jh6hkU7D4z7jDttZbD9YG1yRr03qnrq2yy9i6EYvzTo/edit?tab=t.0">For
-                            The Vibes Applications and Rules.</a><br>
+                                                                               href="https://docs.google.com/document/d/1Jh6hkU7D4z7jDttZbD9YG1yRr03qnrq2yy9i6EYvzTo/edit?tab=t.0">
+                            For
+                            The Vibes Applications and Rules.
+                        </a><br>
                         there are two application forms, one for streamers and one for hero shooter enthusiasts, so make
                         sure to fill out the correct one!<br><br>
                         We hope to see many loving and passionate people join our community, and we can't wait to create
-                        amazing content together!<br><br>With loving regard.</p>
+                        amazing content together!<br><br>With loving regard.
+                    </p>
                     <p style="font-weight: 700;">- For The Vibes Team</p>
                 </div>
 
 
-            </section>
+            </ForTheVibes>
 
-            <section id="legacy" class="content-section">
+            <Legacy id="legacy" class="content-section">
                 <h1>Legacy</h1>
-                <p>Here you will find old memories we have wished to memorialize because we are fond of them! They are
-                    merely for fun and nothing on this section will be relevant to anything!</p>
+                <p>
+                    Here you will find old memories we have wished to memorialize because we are fond of them! They are
+                    merely for fun and nothing on this section will be relevant to anything!
+                </p>
                 <box>
                     <h2><br>Chat Games</h2>
                     <div class="games-container">
@@ -1197,8 +1514,8 @@
                             identical.<br>
                             What appears as a simple command is, in truth, a live simulation of intelligence versus
                             instinct, machine versus maker — a contest of precision and code integrity.<br><br>
-                            <span class="bold">Battle Amounts:<br> Default:</span> 10 battles<br> <span
-                                class="bold">Subs/Mods/Vips:
+                            <span class="bold">Battle Amounts:<br> Default:</span> 10 battles<br> <span class="bold">
+                                Subs/Mods/Vips:
                             </span>15
                             battles<br><br>
 
@@ -1214,16 +1531,17 @@
                             Repeated duels show abnormal adaptability, unpredictable response trees, and a capacity to
                             destabilize the simulation itself.<br><br>
                             <span class="red bold">⚠ WARNING:</span>
-                            Engaging Regnbue Snø in !bduel may result in system <span
-                                class="red bold">instability</span> or
+                            Engaging Regnbue Snø in !bduel may result in system <span class="red bold">instability</span> or
                             personal defeat.
                             Proceed only if you understand what you're challenging.
                         </p>
                     </div>
                     <div class="games-container">
                         <h2>Botrix Roulette<br><br></h2>
-                        <p><span class="bold">
-                                Command ID:</span>
+                        <p>
+                            <span class="bold">
+                                Command ID:
+                            </span>
                             18'15'21'12'5'20'20'5
                             <br>
                             <span class="bold">
@@ -1254,10 +1572,13 @@
                     </div>
 
                     <div class="games-container">
-                        <h2>Botrix Slot Machines<br><br>
+                        <h2>
+                            Botrix Slot Machines<br><br>
                         </h2>
-                        <p><span class="bold">
-                                Command ID:</span>
+                        <p>
+                            <span class="bold">
+                                Command ID:
+                            </span>
                             19'12'15'20-0'13'1'3'8'9'14'5'19
                             <br>
                             <span class="bold">
@@ -1287,8 +1608,10 @@
                     </div>
                     <div class="games-container">
                         <h2>Botrix Gamble House<br><br></h2>
-                        <p><span class="bold">
-                                Command ID:</span>
+                        <p>
+                            <span class="bold">
+                                Command ID:
+                            </span>
                             7'1'13'2'12'5
                             <br>
                             <span class="bold">
@@ -1320,7 +1643,7 @@
 
                 </box>
 
-            </section>
+            </Legacy>
 
         </div>
     </div>
@@ -1334,6 +1657,7 @@
     <script defer src="JS/version.js"></script>
     <script defer src="JS/script.js"></script>
     <script defer src="JS/Cards.js"></script>
+    <script defer src="JS/notification.js"></script>
 </body>
 
 </html>

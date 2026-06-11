@@ -231,6 +231,24 @@ if (searchForm) {
         }
     };
 
+    // When the search icon/button is clicked, ensure the sidebar is expanded and focus the input
+    const searchIcon = searchForm.querySelector('span');
+    if (searchIcon) {
+        searchIcon.addEventListener('click', (e) => {
+            // Prevent default form-related behavior
+            e.preventDefault();
+            if (sidebar?.classList.contains('collapsed')) {
+                sidebar.classList.remove('collapsed');
+                updateThemeIcon();
+            }
+            // Focus and select the input so the user can start typing immediately
+            if (searchInput) {
+                searchInput.focus();
+                try { searchInput.select(); } catch (err) { /* ignore if not supported */ }
+            }
+        });
+    }
+
     searchInput.addEventListener('input', (e) => filterMenu(normalize(e.target.value)));
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {

@@ -1,0 +1,29 @@
+{
+  "displayDuration": 3000,
+  "notificationText": {
+    "A": {
+      "text": "Welcome! To Mals Dens Website!",
+      "duration": 3000
+    },
+
+    "B": {
+      "text": "Don't forget to check out our \n Links and Game Partnerships!",
+      "duration": 5000
+    }
+  },
+
+  "randomIntervalMinutes": 5,
+  "randNotificationText": {
+    "A": {
+      "text": "This site was made with ❤️",
+      "duration": 2500
+    },
+
+    "B": {
+      "text": "Made by Regnbue Snø",
+      "duration": 3000
+    }
+  }
+
+
+}
