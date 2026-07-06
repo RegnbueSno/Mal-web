@@ -1,8 +1,9 @@
 {
-    "version": "2.53.0",
+    "version": "2026.07.06",
+    "version#":  "2.57.0",
     "type": "patch",
     "build": {
-        "number": 352,
+        "number": 358,
         "commit": "b96b5d0",
         "branch": "Main"
     },
