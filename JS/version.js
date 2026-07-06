@@ -16,7 +16,7 @@
     const applyBadge = (cfg) => {
         const badge = document.querySelector('.version-badge');
         if (!badge) return;
-        if (cfg?.version) badge.textContent = `v${cfg.version}`;
+        if (cfg?.version) badge.textContent = `Last Updated: ${cfg.version}`;
         const parts = [];
         if (cfg?.type) parts.push(`type: ${cfg.type}`);
         if (cfg?.build?.number) parts.push(`build #${cfg.build.number}`);

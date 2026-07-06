@@ -7,7 +7,7 @@
     },
 
     "B": {
-      "text": "Don't forget to check out our \n Links and Game Partnerships!",
+      "text": "Don't forget to check out our \n Links and Game Connections!",
       "duration": 5000
     }
   },
@@ -20,10 +20,18 @@
     },
 
     "B": {
-      "text": "Made by Regnbue Snø",
+      "text": "Made by Regnbue Snø, \n a loving community member",
+      "duration": 3000
+    },
+    "C": {
+      "text": "This site is still in development, \n so please be patient!",
+      "duration": 3000
+    },
+    "D": {
+      "text": "This site was made by a European developer, \n Date format will be Year.Month.day",
       "duration": 3000
     }
-  }
+
 
 
 }
