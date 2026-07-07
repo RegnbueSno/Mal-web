@@ -1,0 +1,38 @@
+{
+  "displayDuration": 3000,
+  "notificationText": {
+    "A": {
+      "text": "Welcome! To Mals Dens Website!",
+      "duration": 3000
+    },
+
+    "B": {
+      "text": "Don't forget to check out our \n Links and Game Connections!",
+      "duration": 5000
+    },
+    "C": {
+      "text": "The website is currently under \n complete reconstruction fixes for \n current issues with this website will not be coming. \n info will still be updated as needed.",
+      "duration": 10000
+    }
+  },
+
+  "randomIntervalMinutes": 5,
+  "randNotificationText": {
+    "A": {
+      "text": "This site was made with ❤️",
+      "duration": 2500
+    },
+    "B": {
+      "text": "Made by Regnbue Snø, \n a loving community member",
+      "duration": 3000
+    },
+    "C": {
+      "text": "This site is still in development, \n so please be patient!",
+      "duration": 3000
+    },
+    "D": {
+      "text": "This site was made by a European developer, \n Date format will be Year.Month.day",
+      "duration": 3000
+    }
+  }
+}
