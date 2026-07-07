@@ -16,56 +16,97 @@
     <nav id="sidebar-nav" class="sidebar-nav">
 
         <!-- Added class "menu-item" to choices, and "menu-link" to anchors -->
-        <choice id="home-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">home</span>
-            <a href="https://malden.gg/Home">Home</a>
-        </choice>
-        <choice id="art-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">art_track</span>
-            <a href="https://malden.gg/Art">Mals Art</a>
-        </choice>
-        <choice id="music-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">library_music</span>
-            <a href="https://malden.gg/Music">Community Music</a>
-        </choice>
-        <choice id="initiatives-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">linked_services</span>
-            <a href="https://malden.gg/Initiatives">Initiatives</a>
-        </choice>
-        <choice id="chat-games-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">stadia_controller</span>
-            <a href="https://malden.gg/ChatGames">Chat Games</a>
-        </choice>
-        <choice id="crew-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">diversity_4</span>
-            <a href="https://malden.gg/Crew">Crew</a>
-        </choice>
-        <choice id="support-benefits-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">partner_exchange</span>
-            <a href="https://malden.gg/S&B">Support & Benefits</a>
-        </choice>
-        <choice id="game-connections-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">diversity_2</span>
-            <a href="https://malden.gg/Connections">Game Connections</a>
-        </choice>
-        <choice id="FTV-choice" class="sidebar-choice menu-item">
-            <img style="border-radius:50%;" src="/files/Imgs/Logo/FTV.png" alt="For The Vibes" />
-            <a href="https://malden.gg/FTV">For The Vibes</a>
-        </choice>
-        <choice id="reg-choice" class="sidebar-choice menu-item">
-            <img src="/files/Imgs/Reg/Main.png" alt="Regnbue Snø" />
-            <a href="https://malden.gg/RegnbueSnø">Regnbue Snø</a>
-        </choice>
+        <a href="https://malden.gg/Home">
+            <choice id="home-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">home</span>
+                <p>Home</p>
+            </choice>
+        </a>
 
-        <choice id="legacy-choice" class="sidebar-choice menu-item">
-            <span class="material-symbols-rounded">save_as</span>
-            <a href="https://malden.gg/Legacy">Legacy</a>
-        </choice>
+        <a href="https://malden.gg/Art">
+            <choice id="art-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">art_track</span>
+                <p>Mals Art</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/Music">
+            <choice id="music-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">library_music</span>
+                <p>Community Music</p>
+            </choice>
+        </a>
 
-        <choice id="bugreport-choice" class="sidebar-choice bugreport">
-            <span class="material-symbols-rounded">bug_report</span>
-            <a href="https://github.com/RegnbueSno/Mal-web/issues/new" class="menu-link" data-external="true">Report a Bug</a>
-        </choice>
+        <a href="https://malden.gg/Initiatives">
+            <choice id="initiatives-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">linked_services</span>
+                <p>Initiatives</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/ChatGames">
+            <choice id="chat-games-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">stadia_controller</span>
+                <p>Chat Games</p>
+            </choice>
+        </a>
+
+        <a href="https://malden.gg/Crew">
+            <choice id="crew-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">diversity_4</span>
+                <p>Crew</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/Bugs">
+            <choice id="bugreport-choice" class="sidebar-choice bugreport">
+                <span class="material-symbols-rounded">bug_report</span>
+                <p class="menu-link">Report a Bug</p>
+            </choice>
+        </a>
+
+        <a href="https://malden.gg/S&B">
+            <choice id="support-benefits-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">partner_exchange</span>
+                <p>Support & Benefits</p>
+            </choice>
+        </a>
+
+        <a href="https://malden.gg/Connections">
+            <choice id="game-connections-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">diversity_2</span>
+                <p>Game Connections</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/FTV">
+            <choice id="FTV-choice" class="sidebar-choice menu-item">
+                <img style="border-radius:50%;" src="/files/Imgs/Logo/FTV.png" alt="For The Vibes" />
+                <p>For The Vibes</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/RegnbueSnø">
+            <choice id="reg-choice" class="sidebar-choice menu-item">
+                <img src="/files/Imgs/Reg/Main.png" alt="Regnbue Snø" />
+                <p>Regnbue Snø</p>
+            </choice>
+        </a>
+        
+        <a href="https://malden.gg/Legacy">
+            <choice id="legacy-choice" class="sidebar-choice menu-item">
+                <span class="material-symbols-rounded">save_as</span>
+                <p>Legacy</p>
+            </choice>
+        </a>
+
+        <a style="all:unset;" href="https://github.com/RegnbueSno/Mal-web/issues/new">
+            <choice id="bugreport-choice" class="sidebar-choice bugreport">
+                <span class="material-symbols-rounded">bug_report</span>
+                <p class="menu-link">Report a Bug</p>
+            </choice>
+        </a>
+
     </nav>
     <!-- Added data-external="true" to bypass SPA routing for bugs -->
 

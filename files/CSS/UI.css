@@ -137,7 +137,7 @@ choice {
         width: 350px; /* Open item width size */
     }
 
-    choice a {
+    choice p {
         all: unset;
         flex: 1;
         overflow: hidden;
@@ -145,7 +145,7 @@ choice {
         transition: var(--sidebar-change-transition-time);
     }
 
-    choice.open a {
+    choice.open p {
         transition: var(--sidebar-change-transition-time);
     }
 
