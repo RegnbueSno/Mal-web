@@ -1,0 +1,217 @@
+/* ==========================================================================
+   1. CORE SITE LAYOUT (Side-by-Side Flex System)
+   ========================================================================== */
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    display: flex; /* 🌟 CRITICAL: Places sidebar and main content side-by-side */
+    margin: 0; /* Removes default browser border gaps */
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+/* Forces the injected sidebar wrapper to respect the layout layout math */
+#UIContainer {
+    display: flex;
+    flex-shrink: 0;
+}
+
+/* 🌟 CRITICAL: Gives your home content its own non-overlapping viewport space */
+#main-body {
+    flex-grow: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allows main content to scroll independently */
+    height: 100vh;
+}
+    #main-body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+/* ==========================================================================
+   2. SIDEBAR STRUCTURE & NAVIGATION
+   ========================================================================== */
+
+.sidebar-top {
+    height: 100px;
+}
+
+aside {
+    transition: var(--sidebar-change-transition-time);
+    height: 100vh;
+    background-color: var(--color-bg-sidebar);
+    border-right: 2px solid var(--color-border-hr);
+    width: 100px; /* Using explicit width rule over max-width */
+    flex-shrink: 0;
+
+}
+
+    aside.open {
+        transition: var(--sidebar-change-transition-time);
+        width: 400px; /* Expands cleanly when toggled */
+    }
+
+    aside div {
+        position: relative;
+        padding: 10px;
+        border-bottom: 2px solid var(--color-border-hr);
+        height: 80px;
+        box-sizing: border-box;
+    }
+
+nav {
+    transition: var(--sidebar-change-transition-time);
+    max-width: 100px;
+    height: calc(100vh - 80px); /* Fills screen height minus logo block */
+    overflow-y: auto;
+    padding-bottom: 30px;
+}
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav.open {
+        transition: var(--sidebar-change-transition-time);
+        max-width: 400px;
+    }
+
+/* ==========================================================================
+   3. LOGO & SIDEBAR TOGGLE BUTTON
+   ========================================================================== */
+.logo {
+    height: 70px;
+    opacity: 0;
+    transition: var(--sidebar-change-transition-time);
+}
+
+    .logo.open {
+        transition: var(--sidebar-change-transition-time);
+        opacity: 1;
+    }
+
+.sidebar-button {
+    all: unset;
+    transition: var(--sidebar-change-transition-time);
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--color-bg-secondary);
+    box-sizing: border-box;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 65px;
+}
+
+    .sidebar-button:hover {
+        cursor: pointer;
+    }
+
+    .sidebar-button span {
+        transition: var(--sidebar-change-transition-time);
+    }
+
+    .sidebar-button.open span {
+        transition: var(--sidebar-change-transition-time);
+        transform: rotate(180deg); /* 🌟 Standard rotation layout syntax */
+    }
+
+/* ==========================================================================
+   4. SIDEBAR SELECTIONS / CHOICES
+   ========================================================================== */
+choice {
+    transition: var(--choice-hover-transition-time);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--color-bg-secondary);
+    box-sizing: border-box;
+    margin: 10px 0 0 10px;
+    padding: 5px;
+    width: 80px; /* Closed default menu item box size */
+}
+
+    choice.open {
+        transition: var(--sidebar-change-transition-time);
+        width: 350px; /* Open item width size */
+    }
+
+    choice a {
+        all: unset;
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: var(--sidebar-change-transition-time);
+    }
+
+    choice.open a {
+        transition: var(--sidebar-change-transition-time);
+    }
+
+    choice span {
+        margin-right: 10px; /* Space balance between icon and links text */
+    }
+
+    choice img {
+        width: var(--choice-icon-size);
+        height: var(--choice-icon-size);
+        margin-right: 4px;
+    }
+
+    choice:hover {
+        transition: var(--choice-hover-transition-time);
+        background-color: var(--color-hover-primary);
+        color: white;
+        cursor: pointer;
+        transform: scale(1.05); /* 🌟 FIX: Uses uniform transform style mapping */
+    }
+
+/* ==========================================================================
+   5. UTILITY & DYNAMIC INTERFACE ELEMENTS
+   ========================================================================== */
+/* 🌟 FIX: Corrected typo selector from 'body updated' to a real CSS target */
+body .updated {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    right: 20px;
+    top: 20px;
+}
+
+#updateContainer {
+    border-radius: 10px;
+    background-color: var(--color-bg-secondary);
+    font-size: 18px;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    position: absolute; /* Floats elegantly in the top-right page corner */
+    right: 20px;
+    top: 10px;
+    z-index: 200; /* Locks it cleanly over scrolling main elements */
+}
+
+.material-symbols-rounded {
+    display: inline-block;
+    font-size: var(--choice-icon-size) !important;
+    font-variation-settings: 'OPSZ' var(--choice-icon-size);
+    width: var(--choice-icon-size);
+    height: var(--choice-icon-size);
+}
+
+#main-body h1.Title.open {
+    transition: var(--sidebar-change-transition-time);
+    position: fixed;
+    top: 0;
+    left: 450px;
+}
+
+#main-body h1.Title {
+    transition: var(--sidebar-change-transition-time);
+    position: fixed;
+    top: 0;
+    left: 150px;
+}

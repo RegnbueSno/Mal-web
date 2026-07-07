@@ -1,0 +1,135 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+}
+
+@media (min-width: 750px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (min-width: 1500px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .card p {
+        font-size-adjust: 0.7;
+    }
+}
+
+@media (min-width: 2000px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card h3,
+    .card p {
+        font-size-adjust: 0.9;
+    }
+
+}
+
+.card {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-file {
+    margin-top: 25px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 10px 12px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-body {
+    justify-content: center;
+}
+
+.hover-image {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-image img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.hover-image:hover img {
+    opacity: 1;
+}
+
+.card img {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+    .card img:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        transform: scale(1.02);
+    }

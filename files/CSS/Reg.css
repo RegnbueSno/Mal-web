@@ -1,0 +1,20 @@
+#reg-choice {
+    background-color: var(--color-hover-primary);
+    border: 2px solid lightGray;
+}
+
+#main-body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+#regimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border-radius: 100%;
+    border: var(--color-text-primary), solid;
+}
