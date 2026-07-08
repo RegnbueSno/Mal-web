@@ -5,6 +5,8 @@ a {
     all: unset;
     text-decoration: none;
     color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 * {
@@ -81,3 +83,4 @@ html {
 body {
     overflow: hidden;
 }
+
