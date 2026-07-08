@@ -1,23 +1,48 @@
-// 1. Get the current date
-const today = new Date();
-// const year = today.getFullYear();
-const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-const day = String(today.getDate()).padStart(2, '0');
+// 1. Move everything into the function so it only runs when explicitly called
+function checkUpdateTime() {
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const dateString = `${month}-${day}`;
 
-// 2. Format the date (Example: "2026-07-07")
-const dateString = `${month}-${day}`;
+    // FIX: This query must happen inside the function, AFTER the HTML injection
+    const images = document.querySelectorAll('.RegImg');
+    console.log("Images found after fetch injection:", images.length);
 
-// 3. Select all images with the specific class
-const images = document.querySelectorAll('img.RegImg');
+    const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
 
-// 4. Loop through and change the src using the date
-images.forEach(img => {
-    if (dateString == '03-01') {
-
-    } else if (dateString == '12-24') {
-
+    function getDailyElement(arr, seed) {
+        if (!Array.isArray(arr) || arr.length === 0) return undefined;
+        let hash = (seed * 16807) % 2147483647;
+        const index = Math.abs(hash) % arr.length;
+        return arr[index];
     }
 
-    // img.src = `images/archive-${dateString}.jpg`; 
-    // Result: images/archive-2026-07-07.jpg
-})
+    images.forEach(img => {
+        let image;
+        if (dateString === '03-01') {
+            image = "Birthday.png";
+        } else if (dateString === '05-17') {
+            const chs = ["Regnbue.png", "Flag.png"];
+            image = getDailyElement(chs, dateSeed);
+        } else if (dateString === '02-14') {
+            const chs = ["Flower.png", "Kiss.png"];
+            image = getDailyElement(chs, dateSeed);
+        } else if (month === '10') {
+            const chs = ["Halloween.png", "Autumn.png", "Fire.png"];
+            image = getDailyElement(chs, dateSeed);
+        } else if ((month === '09') || (month === '11')) {
+            image = "Autumn.png";
+        } else if (month === '12') {
+            const chs = ["Christmas.png", "Staryeye.png"];
+            image = getDailyElement(chs, dateSeed);
+        } else {
+            const chs = ["Regnbue.png", "Staryeye.png", "Main.png"];
+            image = getDailyElement(chs, dateSeed);
+        }
+
+        if (image) {
+            img.src = "/files/Imgs/Reg/" + image;
+        }
+    });
+}

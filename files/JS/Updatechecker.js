@@ -10,7 +10,7 @@ async function loadJsonFile() {
     }
 }
 
-async function checkUpdateTime() {
+async function checkJsonUpdateInfo() {
     const container = document.getElementById("updateContainer");
     const jsonObject = await loadJsonFile();
 
