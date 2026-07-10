@@ -43,6 +43,8 @@ function checkUpdateTime() {
 
         if (image) {
             img.src = "/files/Imgs/Reg/" + image;
+        } else {
+            console.error("No image found for the current date. \nvariable dateString: " + dateString + "\nvariable image: " + image);
         }
     });
 }
