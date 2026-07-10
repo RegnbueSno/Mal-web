@@ -41,9 +41,23 @@ function checkUpdateTime() {
             image = getDailyElement(chs, dateSeed);
         }
 
+        const fallbackPath = "/files/Imgs/placeholder.png";
+
+        // VALIDATION INJECTION: Catch broken paths immediately when they try to render
+        img.onerror = function () {
+            console.warn(
+                `Image path not found: ${this.src}. \nReverting to fallback.\n%cFallback Path: %c${fallbackPath}`,
+                "color: lightgreen; font-weight: bold;", // Styles "Fallback Path: "
+                "color: lightblue; font-weight: bold;"    // Styles the variable content
+            );
+            this.onerror = null; // Disconnect listener to prevent an infinite loop if fallback also fails
+            this.src = fallbackPath;
+        };
+
         if (image) {
             img.src = "/files/Imgs/Reg/" + image;
         } else {
+            img.src = "/files/Imgs/placeholder.png"; // Fallback image
             console.error("No image found for the current date. \nvariable dateString: " + dateString + "\nvariable image: " + image);
         }
     });
