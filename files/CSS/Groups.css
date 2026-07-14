@@ -1,0 +1,40 @@
+/*
+    ALL
+*/
+
+.Group {
+    background-color: var(--color-bg-secondary);
+    padding: 50px;
+    border-radius: 50px;
+    display: block;
+    margin-bottom: 50px;
+    max-width: 1500px;
+
+    justify-self: center;
+}
+    .Group * {
+        display: block;
+        justify-self: center;
+        text-align: center;
+    }
+
+/*
+    FOR THE VIBES
+*/
+
+#FTV-choice {
+    background-color: var(--color-hover-primary);
+    border: 2px solid lightGray;
+}
+
+
+
+/*
+    Quid Pro Quo
+*/
+
+
+
+/*
+    Guilded
+*/
