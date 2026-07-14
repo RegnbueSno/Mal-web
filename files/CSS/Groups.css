@@ -17,6 +17,9 @@
         justify-self: center;
         text-align: center;
     }
+    .Group img {
+        height: 275px;
+    }
 
 /*
     FOR THE VIBES
