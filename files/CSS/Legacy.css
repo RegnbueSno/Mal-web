@@ -2,3 +2,18 @@
     background-color: var(--color-hover-primary);
     border: 2px solid lightGray;
 }
+.GamesContainer {
+    background-color: var(--color-bg-secondary);
+    padding: 50px;
+    border-radius: 50px;
+    max-width: 1200px;
+    margin-bottom:50px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.red {
+    color: var(--red-text);
+}
