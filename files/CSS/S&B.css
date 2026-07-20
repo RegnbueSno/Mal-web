@@ -4,13 +4,4 @@
     border: 2px solid lightGray;
 }
 
-p {
-    margin-left: 50px;
-}
 
-.under-text {
-    font-size: 0.8rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.8rem;
-    margin-left: 80px;
-}
