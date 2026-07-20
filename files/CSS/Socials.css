@@ -1,0 +1,14 @@
+#socials-choice {
+    background-color: var(--color-hover-primary);
+    border: 2px solid lightGray;
+}
+
+social img {
+    height: 50px;
+    margin-right:10px;
+}
+
+social {
+    display: flex;
+    align-items: center
+}
