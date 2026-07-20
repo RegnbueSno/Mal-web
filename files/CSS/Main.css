@@ -93,3 +93,10 @@ body {
     margin-bottom: 0.8rem;
     margin-left: 80px;
 }
+
+hr {
+    margin-bottom: 20px;
+    border: solid 2.5px;
+    border-radius: 10px;
+    border-color: white;
+}
