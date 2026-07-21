@@ -93,7 +93,6 @@ body {
 .under-text {
     font-size: 0.8rem;
     color: var(--color-text-secondary);
-    margin-bottom: 0.8rem;
     margin-left: 80px;
 }
 
@@ -102,4 +101,5 @@ hr {
     border: solid 2.5px;
     border-radius: 10px;
     border-color: white;
+    margin-top: 20px;
 }
