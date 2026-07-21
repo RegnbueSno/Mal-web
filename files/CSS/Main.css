@@ -8,6 +8,9 @@ a {
     text-decoration: underline;
     cursor: pointer;
 }
+    a:hover {
+        color:gray;
+    }
 
 * {
     margin: 0;
