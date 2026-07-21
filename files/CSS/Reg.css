@@ -14,4 +14,5 @@
     margin: auto;
     border: 10px, solid, var(--color-border-hr),;
     border-radius: 100%;
+    width:500px;
 }
