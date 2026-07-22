@@ -209,7 +209,7 @@
 
 }
 
-@media (min-width:1080px) {
+@media (min-width:1079px) {
     .sidebar {
         transition: ease var(--mobile-view-time);
         display: initial;
@@ -250,6 +250,14 @@
         transition: ease var(--mobile-view-time);
         transition-behavior: allow-discrete;
         z-index: -1;
+    }
+
+    #ftv.Group img {
+        height: 200px;
+    }
+
+    .Group {
+        min-width: 1070px;
     }
 
 }
