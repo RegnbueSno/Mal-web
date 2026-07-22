@@ -58,7 +58,15 @@
     }
 
     .TopBar {
-        background-color: red;
+        position: fixed;
+        height: 100px;
+        right: 0;
+        left: 0;
+        background-color: var(--color-bg-primary);
+        border: 5px, solid, white;
+        border-top:none;
+        border-left:none;
+        border-right:none;
     }
 
     #mobile-toggle-button {
