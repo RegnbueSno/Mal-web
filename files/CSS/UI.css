@@ -10,6 +10,12 @@ body {
     font-family: sans-serif;
 }
 
+.sidebar-nav {
+    transition: 0.4s;
+}
+.menu-item {
+    transition: 0.4s;
+}
 /* Forces the injected sidebar wrapper to respect the layout layout math */
 #UIContainer {
     display: flex;
@@ -37,14 +43,15 @@ body {
     height: 100px;
 }
 
+
+
 aside {
-    transition: var(--sidebar-change-transition-time);
     height: 100vh;
     background-color: var(--color-bg-sidebar);
     border-right: 2px solid var(--color-border-hr);
     width: 100px; /* Using explicit width rule over max-width */
     flex-shrink: 0;
-
+    transition: var(--sidebar-change-transition-time);
 }
 
     aside.open {

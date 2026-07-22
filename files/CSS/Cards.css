@@ -4,13 +4,13 @@
     gap: 20px;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 1200px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1750px) {
     .card-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -20,7 +20,7 @@
     }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 2300px) {
     .card-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -51,13 +51,14 @@
 }
 
 .card img {
-    width: 100%;
+    width: 25em; /* 1em equals the current element's font size */
     height: auto;
-    max-width: 500px;
+    max-width: 100%; /* Keeps it responsive on small screens */
     border-radius: 10px;
     object-fit: cover;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 
 .card h3 {
     font-size: clamp(1rem, 2vw, 1.4rem);
@@ -124,8 +125,8 @@
 /* Ensure any image inside .card-media scales down to fit entirely inside the fixed box,
    preserving aspect ratio (no cropping). */
 .card-media {
-    width: 457px;
-    height: 457px;
+    max-width: 457px;
+    max-height: 457px;
     overflow: hidden;
     display: block;
     position: relative;
