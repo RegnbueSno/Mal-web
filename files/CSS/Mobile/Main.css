@@ -178,13 +178,14 @@
     .sidebar {
         transition: ease var(--mobile-view-time);
         display: initial;
-        width:auto;
+        width:100px;
         opacity: 1;
     }
 
     .TopBar {
         background:none;
         border:none;
+        z-index:0;
     }
 
     #mobile-toggle-button {
