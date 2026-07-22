@@ -3,14 +3,3 @@
     background-color: var(--color-hover-primary);
     border: 2px solid lightGray;
 }
-@media (min-width:0px) {
-    #main-body {
-        padding-top: 140px;
-    }
-}
-
-@media (min-width:1080px) {
-    #main-body {
-        padding-top: 20px;
-    }
-}
