@@ -26,6 +26,10 @@
     .ChessArena p, .ChessArena a {
         font-size-adjust: 0.2;
     }
+    .ChessArena .bellowtext {
+        margin-top: 5px;
+        
+    }
 
     #updateContainer {
         display: initial;
@@ -139,30 +143,20 @@
         font-size-adjust: 0.70;
         transition: ease var(--mobile-view-time);
     }
-
-    .TopBar {
-    }
-}
-
-@media (min-width:1200px) {
-    .sidebar {
-        display: block;
-    }
-
     #title {
         margin-top: initial;
     }
 
-    #main-body {
-        padding-top: initial;
+    #ftv.Group img {
+        height: initial;
     }
 
-    #title {
-        margin-top: initial;
+    .Group {
+        max-width: initial;
     }
 
-    .Group img {
-        scale: 1;
+    .RegImg {
+        max-width: initial;
     }
 
     .partnership-logo {
@@ -172,6 +166,32 @@
     .ChessArena p, .ChessArena a {
         font-size-adjust: initial;
     }
+
+    .ChessArena .bellowtext {
+        margin-top: initial;
+    }
+
+    
+}
+
+@media (min-width:1080px) {
+    .sidebar {
+        transition: ease var(--mobile-view-time);
+        display: initial;
+        width:auto;
+        opacity: 1;
+    }
+
+    .TopBar {
+        background:none;
+        border:none;
+    }
+
+    #mobile-toggle-button {
+        display:none
+    }
+
+    
 }
 
 .non-change * {
