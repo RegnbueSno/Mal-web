@@ -51,11 +51,12 @@
         height: 100px;
         right: 0;
         left: 0;
-        background-color: var(--color-bg-primary);
+        background-color: var(--color-bg-sidebar);
         border: 2px, solid, var(--color-border-hr);
         border-top: none;
         border-left: none;
         border-right: none;
+        z-index:2;
     }
 
         .TopBar.open {
