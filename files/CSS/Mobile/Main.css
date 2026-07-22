@@ -7,6 +7,26 @@
         margin-top: 80px;
     }
 
+    #ftv.Group img {
+        height: 100px;
+    }
+
+    .Group {
+        max-width: 340px;
+    }
+
+    .RegImg {
+        max-width:300px;
+    }
+
+    .partnership-logo {
+        max-height: 70px;
+    }
+
+    .ChessArena p, .ChessArena a {
+        font-size-adjust: 0.2;
+    }
+
     #updateContainer {
         display: initial;
         opacity: 1;
@@ -56,7 +76,7 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        z-index:2;
+        z-index: 2;
     }
 
         .TopBar.open {
@@ -79,6 +99,11 @@
         #mobile-toggle-button.open {
             opacity: 0;
         }
+
+
+    #title {
+        margin-top: 100px;
+    }
 
     @starting-style {
         .sidebar.open {
@@ -103,6 +128,10 @@
         font-size-adjust: 0.50;
         transition: ease var(--mobile-view-time);
     }
+
+    .Group {
+        max-width: 450px;
+    }
 }
 
 @media (min-width:700px) {
@@ -122,6 +151,26 @@
 
     #title {
         margin-top: initial;
+    }
+
+    #main-body {
+        padding-top: initial;
+    }
+
+    #title {
+        margin-top: initial;
+    }
+
+    .Group img {
+        scale: 1;
+    }
+
+    .partnership-logo {
+        max-height: initial;
+    }
+
+    .ChessArena p, .ChessArena a {
+        font-size-adjust: initial;
     }
 }
 

@@ -12,3 +12,9 @@ social {
     display: flex;
     align-items: center
 }
+
+@media (min-width:0px) {
+    #main-body {
+        padding-top: 110px;
+    }
+}

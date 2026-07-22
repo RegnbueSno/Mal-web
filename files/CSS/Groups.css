@@ -8,15 +8,15 @@
     border-radius: 50px;
     display: block;
     margin-bottom: 50px;
-    max-width: 1500px;
-
     justify-self: center;
 }
+
     .Group * {
         display: block;
         justify-self: center;
         text-align: center;
     }
+
     .Group img {
         height: 275px;
     }
@@ -41,3 +41,9 @@
 /*
     Guilded
 */
+
+@media (min-width:0px) {
+    #main-body {
+        padding-top:105px;
+    }
+}
