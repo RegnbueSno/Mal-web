@@ -4,13 +4,14 @@
 
 @media (min-width:0px) {
     #title {
-        margin-top:60px;
+        margin-top:80px;
     }
 
     #updateContainer {
         display: initial;
         opacity: 1;
         transition: ease var(--mobile-view-time);
+        
     }
 
         #updateContainer.open {
@@ -64,7 +65,10 @@
         left: 20px;
         top: 20px;
         right: auto;
+        width:contain;
+        height:contain;
     }
+
 
         #mobile-toggle-button.open {
             opacity: 0;
@@ -91,6 +95,9 @@
 @media (min-width:1200px) {
     .sidebar {
         display: block;
+    }
+    #title {
+        margin-top: initial;
     }
 }
 
