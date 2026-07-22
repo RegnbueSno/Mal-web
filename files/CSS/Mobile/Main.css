@@ -251,6 +251,7 @@
         transition-behavior: allow-discrete;
         z-index: -1;
     }
+
 }
 
 .non-change * {
