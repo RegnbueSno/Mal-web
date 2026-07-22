@@ -16,7 +16,7 @@
     }
 
     .RegImg {
-        max-width:300px;
+        max-width: 300px;
     }
 
     .partnership-logo {
@@ -26,9 +26,9 @@
     .ChessArena p, .ChessArena a {
         font-size-adjust: 0.2;
     }
+
     .ChessArena .bellowtext {
         margin-top: 5px;
-        
     }
 
     #updateContainer {
@@ -56,6 +56,7 @@
             transition: ease var(--mobile-view-time);
             display: initial;
             opacity: 1;
+            transition-behavior: allow-discrete;
         }
 
 
@@ -69,18 +70,27 @@
         width: 100%;
         min-width: 200px;
     }
+    .card audio {
+        width:260px;
+    }
 
     .TopBar {
+        transition: ease var(--mobile-view-time);
         position: fixed;
         height: 100px;
         right: 0;
         left: 0;
+        top: 0;
         background-color: var(--color-bg-sidebar);
         border: 2px, solid, var(--color-border-hr);
         border-top: none;
         border-left: none;
         border-right: none;
-        z-index: 2;
+        z-index: 1;
+        display: block;
+        opacity: 1;
+        transition: ease var(--mobile-view-time);
+        transition-behavior: allow-discrete;
     }
 
         .TopBar.open {
@@ -88,6 +98,7 @@
             opacity: 0;
             transition: ease var(--mobile-view-time);
             transition-behavior: allow-discrete;
+            z-index: -1;
         }
 
     #mobile-toggle-button {
@@ -133,9 +144,33 @@
         transition: ease var(--mobile-view-time);
     }
 
-    .Group {
-        max-width: 450px;
+    #ftv.Group img {
+        height: 100px;
     }
+
+    .Group {
+        max-width: 500px;
+    }
+
+    .RegImg {
+        max-width: 300px;
+    }
+
+    .partnership-logo {
+        max-height: 70px;
+    }
+
+    .ChessArena p, .ChessArena a {
+        font-size-adjust: 0.2;
+    }
+
+    .ChessArena .bellowtext {
+        margin-top: 5px;
+    }
+    .card audio {
+        width: 450px;
+    }
+
 }
 
 @media (min-width:700px) {
@@ -143,56 +178,60 @@
         font-size-adjust: 0.70;
         transition: ease var(--mobile-view-time);
     }
-    #title {
-        margin-top: initial;
-    }
 
     #ftv.Group img {
-        height: initial;
+        height: 100px;
     }
 
     .Group {
-        max-width: initial;
+        max-width: 700px;
     }
 
     .RegImg {
-        max-width: initial;
+        max-width: 500px;
     }
 
     .partnership-logo {
-        max-height: initial;
+        max-height: 110px;
     }
 
     .ChessArena p, .ChessArena a {
-        font-size-adjust: initial;
+        font-size-adjust: 0.4;
     }
 
     .ChessArena .bellowtext {
-        margin-top: initial;
+        margin-top: 5px;
     }
 
-    
+    .card audio {
+        width: 600px;
+    }
+
 }
 
 @media (min-width:1080px) {
     .sidebar {
         transition: ease var(--mobile-view-time);
         display: initial;
-        width:100px;
+        width: 100px;
         opacity: 1;
     }
 
     .TopBar {
-        background:none;
-        border:none;
-        z-index:0;
+        background: none;
+        border: none;
+        z-index: 0;
     }
 
     #mobile-toggle-button {
-        display:none
+        display: none
     }
-
-    
+    .card audio {
+        width: 450px;
+    }
+    #title {
+        margin-top: initial;
+    }
 }
 
 .non-change * {
