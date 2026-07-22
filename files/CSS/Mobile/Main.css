@@ -1,8 +1,25 @@
 :root {
-    --mobile-view-time:0.45s;
+    --mobile-view-time: 0.45s;
 }
 
 @media (min-width:0px) {
+    #title {
+        margin-top:60px;
+    }
+
+    #updateContainer {
+        display: initial;
+        opacity: 1;
+        transition: ease var(--mobile-view-time);
+    }
+
+        #updateContainer.open {
+            display: none;
+            opacity: 0;
+            transition: ease var(--mobile-view-time);
+            transition-behavior: allow-discrete;
+        }
+
     .sidebar {
         display: none;
         width: 0;
@@ -10,38 +27,48 @@
         transition: ease var(--mobile-view-time);
         transition-behavior: allow-discrete;
     }
+
         .sidebar.open {
             transition: ease var(--mobile-view-time);
             display: initial;
             opacity: 1;
-            width: 1;
         }
 
     @starting-style {
         .sidebar.open {
-            width:0;
+            width: 0;
             opacity: 0;
         }
+
+        #updateContainer.open {
+            display: initial;
+            opacity: 1;
+        }
     }
+
     *:not(.non-change, body) {
         font-size-adjust: 0.35;
         transition: ease var(--mobile-view-time);
     }
+
     .card {
-        width:100%;
+        width: 100%;
         min-width: 200px;
     }
+
     .TopBar {
-        background-color:red;
+        background-color: red;
     }
+
     #mobile-toggle-button {
-        left:20px;
-        top:20px;
-        right:auto;
+        left: 20px;
+        top: 20px;
+        right: auto;
     }
-    #mobile-toggle-button.open {
-        opacity:0;
-    }
+
+        #mobile-toggle-button.open {
+            opacity: 0;
+        }
 }
 
 @media (min-width:500px) {
@@ -49,7 +76,6 @@
         font-size-adjust: 0.50;
         transition: ease var(--mobile-view-time);
     }
-
 }
 
 @media (min-width:700px) {
@@ -59,9 +85,7 @@
     }
 
     .TopBar {
-        
     }
-
 }
 
 @media (min-width:1200px) {

@@ -24,6 +24,10 @@ function toggleSidebar() {
     if (mobileSidebarToggle) {
         mobileSidebarToggle.classList.toggle(classOpen);
     }
+    const updateTime = document.getElementById("updateContainer")
+    if (updateTime) {
+        updateTime.classList.toggle(classOpen);
+    }
     // Changed to querySelectorAll (note the dot for the class name)
     const sidebarContent = document.querySelectorAll(".sidebar-choice");
     sidebarContent.forEach(choice => {
