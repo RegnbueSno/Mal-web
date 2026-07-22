@@ -215,22 +215,41 @@
         display: initial;
         width: 100px;
         opacity: 1;
+        z-index:2;
+    }
+
+    #updateContainer {
+        border: 1px, solid, white;
     }
 
     .TopBar {
         background: none;
         border: none;
-        z-index: 0;
+        z-index: 1;
     }
 
     #mobile-toggle-button {
-        display: none
+        display: none;
+        
     }
     .card audio {
         width: 450px;
     }
     #title {
         margin-top: initial;
+    }
+    #updateContainer.open {
+        display: initial;
+        opacity: 1;
+        transition: ease var(--mobile-view-time);
+        transition-behavior: allow-discrete;
+    }
+    .TopBar.open {
+        display: initial;
+        opacity: 1;
+        transition: ease var(--mobile-view-time);
+        transition-behavior: allow-discrete;
+        z-index: -1;
     }
 }
 
