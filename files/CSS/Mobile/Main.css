@@ -121,6 +121,10 @@
         margin-top: 100px;
     }
 
+    .Nikki-offer {
+        width:300px;
+    }
+
     @starting-style {
         .sidebar.open {
             width: 0;
@@ -172,6 +176,9 @@
     .card audio {
         width: 450px;
     }
+    .Nikki-offer {
+        width: 350px;
+    }
 }
 
 @media (min-width:700px) {
@@ -193,7 +200,7 @@
     }
 
     .partnership-logo {
-        max-height: 110px;
+        min-height: 110px;
     }
 
     .ChessArena p, .ChessArena a {
@@ -205,6 +212,9 @@
     }
 
     .card audio {
+        max-width: 600px;
+    }
+    .Nikki-offer {
         width: 600px;
     }
 }
@@ -262,9 +272,15 @@
     .Group {
         min-width: 1070px;
     }
+
+    .Nikki-offer {
+        width: 800px;
+    }
 }
 
 .non-change * {
     font-size-adjust: initial;
     transition: none;
 }
+
+

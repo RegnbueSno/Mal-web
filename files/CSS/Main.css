@@ -54,6 +54,10 @@ body {
     display: none;
 }
 
+.bold {
+    font-weight:700;
+}
+
 body {
     overflow-y: hidden;
 }
