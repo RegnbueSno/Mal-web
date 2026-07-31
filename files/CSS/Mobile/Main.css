@@ -70,9 +70,10 @@
         width: 100%;
         min-width: 200px;
     }
-    .card audio {
-        width:260px;
-    }
+
+        .card audio {
+            width: 260px;
+        }
 
     .TopBar {
         transition: ease var(--mobile-view-time);
@@ -167,10 +168,10 @@
     .ChessArena .bellowtext {
         margin-top: 5px;
     }
+
     .card audio {
         width: 450px;
     }
-
 }
 
 @media (min-width:700px) {
@@ -206,7 +207,6 @@
     .card audio {
         width: 600px;
     }
-
 }
 
 @media (min-width:1079px) {
@@ -215,7 +215,7 @@
         display: initial;
         width: 100px;
         opacity: 1;
-        z-index:2;
+        z-index: 2;
     }
 
     #updateContainer {
@@ -230,20 +230,23 @@
 
     #mobile-toggle-button {
         display: none;
-        
     }
+
     .card audio {
         width: 450px;
     }
+
     #title {
         margin-top: initial;
     }
+
     #updateContainer.open {
         display: initial;
         opacity: 1;
         transition: ease var(--mobile-view-time);
         transition-behavior: allow-discrete;
     }
+
     .TopBar.open {
         display: initial;
         opacity: 1;
@@ -259,7 +262,6 @@
     .Group {
         min-width: 1070px;
     }
-
 }
 
 .non-change * {

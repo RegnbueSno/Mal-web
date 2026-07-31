@@ -4,26 +4,42 @@
 }
 
 .ChessArena {
-    display:flex;
+    display: flex;
 }
 
     .ChessArena img {
         height: 200px;
-        border-radius:50px;
+        border-radius: 100%;
     }
+
     .ChessArena div {
         margin-top: auto;
         margin-bottom: auto;
         margin-left: 50px;
     }
-    .ChessArena p {
 
-        font-size:50px;
-        font-weight:700;
+    .ChessArena p {
+        font-size: 50px;
+        font-weight: 700;
     }
 
     .ChessArena .bellowtext {
         font-weight: 200;
-        font-size:30px;
+        font-size: 30px;
         margin-left: 50px;
+    }
+
+.vgs {
+    display: flex;
+    align-items: center;
+}
+
+    .vgs img {
+        height: 200px;
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .vgs .studio-text {
+        display: inline-block;
     }
