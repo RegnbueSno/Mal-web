@@ -33,3 +33,10 @@ function toggleSidebar() {
 
 }
 
+// Expose to global scope so inline handlers or other non-module code can call it
+try {
+    window.toggleSidebar = toggleSidebar;
+} catch (e) {
+    // ignore in restricted environments
+}
+

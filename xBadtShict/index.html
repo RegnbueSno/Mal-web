@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Regnbue Snø">
+    <title>Mals Den</title>
+    <link rel="icon" type="image/x-icon" href="/files/Imgs/Logo/favicon.ico">
+
+    <!-- Discord Link Preview Meta Tags -->
+    <meta property="og:title" content="Mals Den" />
+    <meta property="og:description" content="The website for MalachaiHemets Den" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://malden.gg" />
+    <meta property="og:image" content="https://malden.gg/files/Imgs/Logo/Mals_Den_dark_mode.png" />
+    <meta name="theme-color" content="#c77e2a" />
+
+
+    <!-- Google Material Icons -->
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/files/CSS/Main.css">
+    <link rel="stylesheet" href="/files/CSS/Mobile/Main.css">
+    <link rel="stylesheet" href="/files/CSS/UI.css">
+    <link rel="stylesheet" href="/files/CSS/april.css">
+
+    <!-- Custom Scripts -->
+    <script type="module" data-uifetch="false" data-updatechecker="false" data-datechanges="false" data-sidebar="false" src="/files/JS/MasterScript.js" defer></script>
+
+
+</head>
+<body>
+
+    <!-- The placeholder container -->
+    <div id="UIContainer"></div>
+
+    <!-- Main Body -->
+    <main id="main-body">
+        <h1 style="display: none;">You've been rickrolled!</h1>
+        <p style="display: none;">Happy april fools! >:3</p>
+        <video id="video" autoplay loop playsinline>
+            <source src="/files/Vids/Rick.mp4" type="video/mp4">
+        </video>
+        <script>
+            (function () {
+                const v = document.getElementById('video');
+                function tryPlay() { v.play().catch(() => { }); }
+                if (document.readyState === 'complete' || document.readyState === 'interactive') tryPlay();
+                else {
+                    const startAttempts = () => {
+                        if (tryPlay()) return;
+                        const id = setInterval(() => {
+                            const vid = document.querySelector('video');
+                            if (!vid) return;
+                            const playPromise = vid.play();
+                            if (playPromise !== undefined) {
+                                playPromise.then(() => {
+                                    const h = document.querySelector('h1');
+                                    const p = document.querySelector('p');
+                                    if (h) h.style.display = 'block';
+                                    if (p) p.style.display = 'block';
+                                    clearInterval(id);
+                                }).catch(() => { /* ignore play failure, keep trying */ });
+                            }
+                        }, 500);
+                    };
+                    document.addEventListener('DOMContentLoaded', startAttempts);
+                    if (document.readyState === 'complete' || document.readyState === 'interactive') startAttempts();
+                }
+            })();
+        </script>
+    </main>
+
+
+
+
+</body>
+</html>
