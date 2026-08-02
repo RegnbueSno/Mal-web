@@ -6,7 +6,7 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
     function rickroll() {
         // window.location.replace() prevents the user from getting stuck in a back-button loop
         // SAFETY CHECK: Prevent redirecting if the browser is already on the target URL
-        if (window.location.pathname !== destinationURL && !window.location.href.includes(destinationURL)) {
+        if (window.location.pathname !== "/xBadtShict" && !window.location.href.includes("/xBadtShict")) {
             // window.location.replace() prevents the user from getting stuck in a back-button loop
             window.location.replace('/xBadtShict');
             console.log("Redirecting to April Fools' destination:", '/xBadtShict');
@@ -16,7 +16,7 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
     }
 
     function malrankow() {
-        const originMatches = window.location.href === 'https://malden.gg/Home/';
+        const originMatches = window.location.href === 'https://malden.gg/Home/'; 
         
         if (originMatches) {
             const el = document.getElementById('HomeTitle');
