@@ -15,6 +15,14 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
         }
     }
 
+    function startCatClickSound() {
+        document.addEventListener("click", function () {
+            var sound = document.getElementById("clickSound");
+            sound.currentTime = 0; // Rewinds the audio to the start
+            sound.play();
+        });
+    }
+
     function malrankow() {
         const originMatches = window.location.href === 'https://malden.gg/Home/'; 
         
@@ -52,7 +60,7 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
         const incomingLink = document.referrer;
         console.log('Incoming link:', incomingLink);
         if (dateString === '04-01') {
-            let trolls = ["Malrankow", "Rickroll", "flip"];
+            let trolls = ["Malrankow", "Rickroll", "flip", "Cat"];
             let check = getDailyElement(trolls);
             if (check == "Rickroll") {
                 rickroll();
@@ -64,6 +72,9 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
             } else if (check == "flip") {
                 flip();
                 console.log('Date is 04-01, executed today\'s troll:', check);
+                reset(incomingLink)
+            } else if (check == "Cat"){
+                startCatClickSound()
                 reset(incomingLink)
             } else {
                 reset(incomingLink)
