@@ -18,7 +18,8 @@ const scripts = [
     { name: 'Updatechecker', load: () => import('./Updatechecker.js') }, // 2. Check system updates
     { name: 'DateChanges', load: () => import('./DateChanges.js') },     // 3. Process calendar states
     { name: 'UIFetch', load: () => import('./UIFetch.js') },         // 4. Fetch/inject subfolder HTML safely
-    { name: 'Sidebar', load: () => import('./Sidebar.js') }          // 5. Render secondary UI elements last
+    { name: 'Sidebar', load: () => import('./Sidebar.js') }   ,       // 5. Render secondary UI elements last
+    { name: 'DiscordChange', load: () => import('./DiscordChange.js') }  
 ];
 
 // 4. Load scripts sequentially using an async execution queue

@@ -1,3 +1,4 @@
+
 #reg-choice {
     background-color: var(--color-hover-primary);
     border: 2px solid lightGray;
@@ -14,5 +15,10 @@
     margin: auto;
     border: 10px, solid, var(--color-border-hr),;
     border-radius: 100%;
-    width:500px;
+    width: 500px;
+}
+
+div.iframe {
+    display: flex;
+    justify-content: center;
 }

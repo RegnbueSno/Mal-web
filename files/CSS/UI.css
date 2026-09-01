@@ -222,3 +222,33 @@ body .updated {
     top: 0;
     left: 150px;
 }
+
+/*
+
+    ==========================================================================
+    6. Discord Widget
+    ==========================================================================
+*/
+
+.mals-discord-widget-div {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.widget-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mals-widget, .regs-widget {
+    grid-column: 1;
+    grid-row: 1;
+
+}
+
+.widget-off {
+    z-index: -1;
+}

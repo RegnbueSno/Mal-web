@@ -76,9 +76,9 @@ import {dateString, dateSeed, getDailyElement } from './utils.js';
             } else if (check == "Cat"){
                 startCatClickSound()
                 reset(incomingLink)
-            } else {
-                reset(incomingLink)
-            }
+            } 
+        } else {
+            reset(incomingLink)
         }
     }
 
