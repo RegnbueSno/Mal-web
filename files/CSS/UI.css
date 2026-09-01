@@ -252,3 +252,41 @@ body .updated {
 .widget-off {
     z-index: -1;
 }
+
+#widget-container {
+    width: 200px;
+    height: 100px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#widget-container-main.closed {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(360px); /* Moves the element down */
+    opacity: 0;
+    pointer-events: none;
+}
+
+#widget-toggle-btn {
+    transition: transform 0.3s ease; /* Makes the button movement smooth */
+    margin-top: 10px;
+    font-size: 1px;
+    border-radius: 25px;
+    border: 0px;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-secondary);
+    margin-left: 300px;
+}
+
+
+/* Move the button down when the element is closed */
+#widget-container-main.closed + #widget-toggle-btn,
+body:has(#widget-container-main.closed) #widget-toggle-btn {
+  transform: translateY(360px); /* Adjust this value to match your element's size */
+}
+
+
+@media (max-width: 600px) {
+    .widget-container {
+        display: none; /* Hides the widget on smaller screens */
+    }
+}
