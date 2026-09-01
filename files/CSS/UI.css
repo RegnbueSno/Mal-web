@@ -275,8 +275,15 @@ body .updated {
     color: var(--color-text-primary);
     background-color: var(--color-bg-secondary);
     margin-left: 300px;
+    width: 80px;
+    height: 80px;
+    
 }
-
+    #widget-toggle-btn:hover {
+        cursor: pointer;
+        background-color: var(--color-hover-secondary);
+        color: white;
+    }
 
 /* Move the button down when the element is closed */
 #widget-container-main.closed + #widget-toggle-btn,
@@ -289,4 +296,13 @@ body:has(#widget-container-main.closed) #widget-toggle-btn {
     .widget-container {
         display: none; /* Hides the widget on smaller screens */
     }
+}
+
+.widget-button-logo {
+    width: 60px;
+    margin: auto;
+}
+
+#widget-button-span.non-display {
+    display: none;
 }

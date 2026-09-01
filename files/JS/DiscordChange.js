@@ -3,6 +3,8 @@ const RegsElement = document.querySelector(".regs-widget");
 const button = document.getElementById('widget-toggle-btn');
 const buttonSpan = document.getElementById("widget-button-span");
 const element = document.getElementById('widget-container-main');
+const logo = document.getElementsByClassName('widget-button-logo')[0];
+
 console.groupCollapsed("DiscordElements");
 if (MalsElement) {
     console.log("MalsElement found");
@@ -16,6 +18,9 @@ if (button) {
 if (element) {
     console.log("Element found");
 }
+if (logo) {
+    console.log("Logo found");
+}
 
 console.groupEnd("DiscordElements");
 let time = 30;
@@ -28,11 +33,13 @@ function toggleDiscord() {
     console.log("Toggling Discord widget visibility");
     element.classList.toggle('closed');
     if (element.classList.contains('closed')) {
-        buttonSpan.textContent = 'open_in_full';
+        buttonSpan.classList.add('non-display');
+        logo.classList.remove('non-display');
         element.classList.add("closed");
         console.log("Widget closed");
     } else {
-        buttonSpan.textContent = 'close';
+        buttonSpan.classList.remove('non-display');
+        logo.classList.add('non-display');
         element.classList.remove("closed");
         console.log("Widget opened");
 

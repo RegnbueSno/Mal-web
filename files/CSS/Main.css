@@ -107,3 +107,7 @@ hr {
     border-color: white;
     margin-top: 20px;
 }
+
+.non-display {
+    display: none;
+}
