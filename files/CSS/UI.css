@@ -233,7 +233,7 @@ body .updated {
 .mals-discord-widget-div {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     z-index: 1000;
 }
 
@@ -246,6 +246,7 @@ body .updated {
 .mals-widget, .regs-widget {
     grid-column: 1;
     grid-row: 1;
+    margin-left:25px;
 
 }
 
