@@ -65,6 +65,7 @@ body {
 #main-body {
     color: var(--color-text-primary);
     opacity: 1;
+    padding-bottom: 50px;
 }
 
 p {
