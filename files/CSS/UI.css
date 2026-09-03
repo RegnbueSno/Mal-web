@@ -275,7 +275,7 @@ body .updated {
     border: 0px;
     color: var(--color-text-primary);
     background-color: var(--color-bg-secondary);
-    margin-left: 300px;
+    
     width: 80px;
     height: 80px;
     
@@ -289,9 +289,14 @@ body .updated {
 /* Move the button down when the element is closed */
 #widget-container-main.closed + #widget-toggle-btn,
 body:has(#widget-container-main.closed) #widget-toggle-btn {
-  transform: translateY(360px); /* Adjust this value to match your element's size */
+    transform: translateY(360px); /* Adjust this value to match your element's size */
 }
-
+#regimg, #malimg {
+    transform: translateY(8px)
+}
+#malimg.closed, #regimg.closed {
+    transform:translateY(380px)
+}
 
 @media (max-width: 600px) {
     .widget-container {
@@ -306,4 +311,10 @@ body:has(#widget-container-main.closed) #widget-toggle-btn {
 
 #widget-button-span.non-display {
     display: none;
+}
+
+.curnt-discord {
+    width: 80px;
+    margin-left: 220px;
+    border-radius: 25px;
 }
