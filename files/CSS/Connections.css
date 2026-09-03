@@ -43,3 +43,7 @@
     .vgs .studio-text {
         display: inline-block;
     }
+
+.studio-text {
+    font-weight: 700;
+}
