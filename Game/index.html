@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
 
-    <title>Game!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/files/Imgs/Logo/favicon.ico">
+    <meta name="author" content="Regnbue Snø">
+
+    <title>Mals Den Game</title>
 
     <link rel="stylesheet" href="css/Main.css">
-    
+
+    <meta property="og:title" content="Mals Den" />
+    <meta property="og:description" content="The website for MalachaiHemets Den" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://malden.gg/Home" />
+    <meta property="og:image" content="https://malden.gg/files/Imgs/Logo/Mals_Den_dark_mode.png" />
+    <meta name="theme-color" content="#c77e2a" />
+
 </head>
 <body>
     <div class="topz">
@@ -15,7 +28,12 @@
         
         <button id="backToStart" function="backToStartScreen" hidden>Back</button>
         <div class="save-management-toolbar">
+            <a href="../Home/index.html">
+                <button>Back to MalDen.gg</button>
+            </a>
+            
             <button id="backupSaveBtn" function="backupSave">Save Data Backup</button>
+
 
             <label class="file-upload-wrapper">
                 Upload Save Data
@@ -118,7 +136,6 @@
         <script src="js/Utils.js"></script>
         <script src="js/config.js"></script>
         <script type="module" src="js/Game.js"></script>
-        <script src="js/yaoi.js"></script>
         <script type="module" src="js/Module.js"></script>
 
     </scripts>
