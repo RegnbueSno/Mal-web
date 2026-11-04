@@ -1,0 +1,543 @@
+:root {
+    --color-text-primary: #F1F5F9;
+    --color-text-placeholder: #A6B7D2;
+    --color-bg-primary: #111827;
+    --color-bg-secondary: rgba(31, 41, 55, 0.75); /* Refined dark frosted glass */
+    --color-bg-sidebar: #1f2937;
+    --color-border-hr: #3B475C;
+    --color-border-glow: rgba(199, 126, 42, 0.3); /* Subtle golden aura color */
+    --color-hover-primary: #c77e2a; /* Dark amber color */
+
+    --color-hover-secondary: #48566a;
+    --color-shadow: rgba(0, 0, 0, 0.5);
+    --red-text: #ef4444; /* Cleaned up to an updated modern red */
+    /* Settings */
+    --choice-hover-transition-time: 0.25s;
+    --sidebar-change-transition-time: 0.5s;
+    --choice-icon-size: 65px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100dvh;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: var(--color-bg-primary);
+    background-image: radial-gradient(circle at top center, #1e293b 0%, #111827 80%); /* Adds dynamic layout depth */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    color: var(--color-text-primary);
+}
+
+    *[hidden] {
+        display: none !important;
+    }
+
+/* --- Global UI & Form Elements --- */
+button, .file-upload-wrapper {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid #4b5563;
+    padding: 10px 20px;
+    transition: all var(--choice-hover-transition-time) ease;
+    border-radius: 8px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+    button:hover {
+        background-color: var(--color-hover-primary);
+        border-color: #f59e0b;
+        color: #0f172a; /* High contrast text on dark amber hover */
+        box-shadow: 0 0 12px var(--color-border-glow);
+        transform: translateY(-1px);
+    }
+
+    button:active {
+        transform: translateY(1px);
+    }
+
+.custom-file-button {
+    font-weight: 600;
+}
+
+    .custom-file-button:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* --- Centered Main Menu Layout --- */
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers items vertically in the middle */
+    align-items: center; /* Centers items horizontally in the middle */
+    gap: 16px; /* Clean stacking gap distance */
+    z-index: 5;
+    padding: 20px;
+}
+
+    /* Forces buttons to line up vertically with matching dimensions */
+    #startScreen button {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        text-align: center;
+    }
+
+#gameContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 40px 0;
+}
+
+#gameContent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.ending-display-card {
+    width: 100%;
+    max-width: 480px; /* Keeps the inner box tight and readable */
+    padding: 20px 25px;
+    background: rgba(139, 0, 0, 0.15);
+    border: 2px solid #8b0000;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInEndingCard 0.6s ease-out forwards;
+}
+
+
+.bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    max-width: 250px;
+}
+
+    .bubble name {
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #e0a96d; /* Locked onto your golden accent color */
+        margin-bottom: 8px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .bubble p {
+        background-color: var(--color-bg-secondary);
+        padding: 14px 18px;
+        border-radius: 8px;
+        border: 1px solid #374151;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 8px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 10px 15px -3px var(--color-shadow);
+    }
+
+    .bubble img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 2px solid #4b5563;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        transition: border-color 0.3s ease;
+    }
+
+    .bubble:hover img {
+        border-color: var(--color-hover-primary);
+    }
+
+/* --- Choice / Action Buttons Layout --- */
+#gameActions {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.gameButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.gameButton {
+    background-color: rgba(31, 41, 55, 0.85);
+    color: var(--color-text-primary);
+    border: 1px solid #4b5563;
+    padding: 12px 24px;
+    transition: all var(--choice-hover-transition-time) cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    max-width: 300px;
+    text-align: center;
+}
+
+    .gameButton:hover {
+        background-color: var(--color-hover-primary);
+        border-color: #f59e0b;
+        color: #0f172a;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px var(--color-border-glow);
+    }
+
+.hide {
+    visibility: hidden;
+}
+
+#backToStart {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.js-fade-hiding {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* --- Story Selection Screen --- */
+#storySelection {
+    justify-items: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+    #storySelection h2 {
+        font-size: 42px;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        background: linear-gradient(to right, #ffffff, #a6b7d2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 40px;
+    }
+
+.storyContainer {
+    max-width: 220px;
+    background: var(--color-bg-secondary);
+    border: 1px solid #374151;
+    padding: 24px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+    .storyContainer:hover {
+        border-color: var(--color-hover-primary);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 0 15px var(--color-border-glow);
+    }
+
+    .storyContainer img {
+        border-radius: 50%;
+        border: 3px solid #4b5563;
+        margin-bottom: 16px;
+        transition: border-color 0.3s ease;
+        height: 150px;
+        width: 150px;
+    }
+
+    .storyContainer:hover img {
+        border-color: var(--color-hover-primary);
+    }
+
+    .storyContainer name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 16px;
+    }
+
+    .storyContainer, .storyContainer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+#storyList {
+    max-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+    #storyList::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #storyList::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    #storyList::-webkit-scrollbar-thumb {
+        background: #374151;
+        border-radius: 3px;
+    }
+
+        #storyList::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+
+/* --- Persistent Inventory Panel UI --- */
+#inventoryDisplay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(17, 24, 39, 0.85); /* Coordinated theme depth palette fallback */
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 14px 18px;
+    min-width: 160px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: var(--color-text-primary);
+    z-index: 1000;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.inventory-item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+}
+
+    .inventory-item-row:last-child {
+        margin-bottom: 0;
+    }
+
+.item-name {
+    font-weight: 600;
+    color: #e0a96d; /* Perfect matching gold label */
+}
+
+.item-qty {
+    color: #38bdf8; /* Vibrant neon secondary value indicator */
+    font-weight: 700;
+}
+
+/* --- Endings & Gallery Layout Panels --- */
+.ending-display-card {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background: rgba(139, 0, 0, 0.15); /* Sleek translucent deep crimson tint */
+    border: 2px solid #8b0000;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInEndingCard 0.6s ease-out forwards;
+}
+
+.ending-card-title {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.ending-card-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+@keyframes fadeInEndingCard {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-gallery-frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    background: #121212;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+    .gallery-header h3 {
+        margin: 0;
+        color: #ffffff;
+        letter-spacing: 2px;
+    }
+
+.gallery-close-btn {
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+    .gallery-close-btn:hover {
+        color: #ff4d4d;
+    }
+
+.endings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.ending-gallery-card {
+    padding: 15px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: #1a1a1a;
+}
+
+    .ending-gallery-card.unlocked {
+        border: 1px solid #d4af37; /* Metallic Gold Accent borders */
+        box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1);
+    }
+
+    .ending-gallery-card.locked {
+        border: 1px solid #2a2a2a;
+        opacity: 0.5;
+    }
+
+.gallery-card-badge {
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.unlocked .gallery-card-badge {
+    color: #d4af37;
+}
+
+.locked .gallery-card-badge {
+    color: #666666;
+}
+
+.gallery-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.gallery-card-desc {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    line-height: 1.3;
+}
+
+.gallery-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.gallery-progress-stats {
+    font-size: 0.75rem;
+    color: #d4af37; /* Matches portrait profile gold colors */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gallery-progress-track {
+    width: 100%;
+    height: 6px;
+    background: #222222;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 1px solid #333333;
+}
+
+.gallery-progress-fill {
+    width: 0%; /* Adjusted programmatically by JS engine updates */
+    height: 100%;
+    background: linear-gradient(90deg, #aa820a 0%, #d4af37 100%);
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.topz {
+    position: relative;
+    z-index: 100;
+}
