@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Game!</title>
+
+    <link rel="stylesheet" href="css/Main.css">
+    
+</head>
+<body>
+    <div class="topz">
+        <button class="debug" onclick="saveGameState()" hidden>Save to local storage</button>
+        <button class="debug" onclick="loadGameState()" hidden>load from local storage</button>
+        <button class="debug" onclick="console.log('SaveData:', gameState)" hidden>Log gameState</button>
+        
+        <button id="backToStart" function="backToStartScreen" hidden>Back</button>
+        <div class="save-management-toolbar">
+            <button id="backupSaveBtn" function="backupSave">Save Data Backup</button>
+
+            <label class="file-upload-wrapper">
+                Upload Save Data
+                <input type="file" id="saveFileInput" accept=".json" style="display:none;" />
+            </label>
+            <span id="fileStatusText">No JSON file loaded</span>
+        </div>
+
+    </div>
+
+    <div id="startScreen">
+        <button id="startGame" function="startGame">Start Game</button>
+        <button id="chooseStory" function="showStoryScreen">Choose Story</button>
+        <button id="viewEndingsBtn" function="toggleEndingsGallery">View Achievements</button>
+        
+    <!-- Main Menu Endings Gallery Container -->
+        <div id="endingsGalleryContainer" class="menu-gallery-frame" hidden>
+            <div class="gallery-header">
+                <div class="gallery-title-block">
+                    <h3>UNLOCKED ENDINGS</h3>
+                    <!-- 🟩 Progress percentage will insert here -->
+                    <div id="galleryProgressStats" class="gallery-progress-stats">COMPLETION: 0/3 (0%)</div>
+                </div>
+                <button id="closeGalleryBtn" class="gallery-close-btn" function="toggleEndingsGallery">✕</button>
+            </div>
+
+            <!-- 🟩 Visual Slider Bar Tracker Element Layer -->
+            <div class="gallery-progress-track">
+                <div id="galleryProgressBarFill" class="gallery-progress-fill"></div>
+            </div>
+
+            <div id="endingsGrid" class="endings-grid">
+                <!-- Rows will be injected here dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div id="storySelection" hidden>
+        <h2>Choose a Story</h2>
+        <div id="storyList">
+            <div id="Testing" class="storyContainer debug" hidden>
+                <img src="Stories/Images/placeholder.png"/>
+                <div>
+                    <name>Test</name>
+                    <button id="test" function="chooseStory">Activate</button>
+                </div>
+            </div>
+            <div id="regsStory" class="storyContainer">
+                <img src="Stories/Images/Regnbue.png"/>
+                <div>
+                    <name>Regs Story</name>
+                    <button id="RegsStory" function="chooseStory">Activate</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="gameContainer" hidden>
+        <div id="inventoryDisplay"></div>
+        <div id="gameContent">
+            <div id="bubble1" class="bubble">
+                <img src="Stories/Images/placeholder.png" />
+                <name></name>
+                <p>placeholder text</p>
+            </div>
+            <div id="bubble2" class="bubble">
+                <img src="Stories/Images/placeholder.png" />
+                <name></name>
+                <p>placeholder text</p>
+            </div>
+            <div id="bubble3" class="bubble">
+                <img src="Stories/Images/placeholder.png" />
+                <name></name>
+                <p>placeholder text</p>
+            </div>
+            <div id="bubble4" class="bubble">
+                <img src="Stories/Images/placeholder.png" />
+                <name></name>
+                <p>placeholder text</p>
+            </div>
+
+        </div>
+        <div id="gameActions">
+            <div class="gameButtonContainer">
+                <button id="button1" class="gameButton">placeholder text</button>
+                <button id="button2" class="gameButton">placeholder text</button>
+                <button id="button3" class="gameButton">placeholder text</button>
+            </div>
+            <div class="gameButtonContainer">
+                <button id="button4" class="gameButton">placeholder text</button>
+                <button id="button5" class="gameButton">placeholder text</button>
+                <button id="button6" class="gameButton">placeholder text</button>
+            </div>
+        </div>
+    </div>
+
+    <scripts>
+
+        <script src="js/Utils.js"></script>
+        <script src="js/config.js"></script>
+        <script type="module" src="js/Game.js"></script>
+        <script src="js/yaoi.js"></script>
+        <script type="module" src="js/Module.js"></script>
+
+    </scripts>
+
+</body>
+</html>
