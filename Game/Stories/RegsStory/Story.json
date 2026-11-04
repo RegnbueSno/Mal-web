@@ -1,0 +1,15 @@
+{
+  "Meta": {
+    "StartingState": {
+      "Items": {
+        "Give": {
+          ""
+          "Map": true
+        }
+      }
+    }
+  },
+  "Starting Scene": {
+
+  }
+}
