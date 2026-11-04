@@ -1,0 +1,149 @@
+{
+  "Meta": {
+    "StartingState": {
+      "Items": {
+        "Give": {
+          "Gold": 100,
+          "OldKey": 1
+        }
+      },
+      "Flags": {
+        "Give": {
+          "HasDefaultBackground": true
+        }
+      }
+    }
+  },
+  "Starting Scene": {
+    "Bubbles": {
+      "Bubble1": {
+        "Text": "Welcome to the testing grounds. You wake up with 100 Gold and an Old Key in your inventory display.",
+        "Character": "Narrator"
+      },
+      "Bubble2": {
+        "Text": "Hey there! I am a mysterious companion. Right now, you haven't unlocked my identity, so you should see my HiddenImage and my name masked as '???'!",
+        "Character": "MysteriousStranger"
+      }
+    },
+    "Choices": {
+      "Choice1": {
+        "Text": "Bribe the stranger (Costs 50 Gold)",
+        "Next Scene": "Scene_Bribed",
+        "Requierments": {
+          "Items": {
+            "Requier": {
+              "Take": {
+                "Gold": 50
+              }
+            }
+          }
+        }
+      },
+      "Choice2": {
+        "Text": "Unlock the nearby chest using your Old Key",
+        "Next Scene": "Scene_Chest_Opened",
+        "Requierments": {
+          "Items": {
+            "Requier": {
+              "OldKey": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "Scene_Bribed": {
+    "Bubbles": {
+      "Bubble1": {
+        "Text": "You slide 50 Gold to the stranger. Your top-right inventory display should drop to 50 Gold instantly.",
+        "Character": "Narrator"
+      },
+      "Bubble2": {
+        "Text": "Wow, thank you! My name is actually Bob! The engine has just set the 'StrangerRevealed' flag. On the next screen, my standard profile image and real name will unlock!",
+        "Character": "MysteriousStranger"
+      }
+    },
+    "Choices": {
+      "Choice1": {
+        "Text": "Talk to Bob now that he trusts you",
+        "Next Scene": "Scene_Bob_Revealed",
+        "Requierments": {
+          "Items": {
+            "Require": {
+              "Take": {
+                "Gold": 50
+              }
+            }
+          },
+          "Flags": {
+            "Give": {
+              "StrangerRevealed": true
+            }
+          }
+        }
+        
+      }
+    }
+  },
+  "Scene_Bob_Revealed": {
+    "Bubbles": {
+      "Bubble1": {
+        "Text": "Look at that! Because the 'StrangerRevealed' flag is true, you can now see my actual portrait and my name says 'MysteriousStranger' instead of question marks!",
+        "Character": "MysteriousStranger"
+      }
+    },
+    "Choices": {
+      "Choice1": {
+        "Text": "Head towards the final exit gate",
+        "Next Scene": "Scene_Final_Gate",
+        "Requierments": {}
+      }
+    }
+  },
+  "Scene_Chest_Opened": {
+    "Bubbles": {
+      "Bubble1": {
+        "Text": "You insert the Old Key into the chest. It clicks open smoothly.",
+        "Character": "Narrator"
+      },
+      "Bubble2": {
+        "Text": "Inside you find a legendary item: the StarMedallion! Your Old Key is removed from your pouch.",
+        "Character": "Narrator"
+      }
+    },
+    "Choices": {
+      "Choice1": {
+        "Text": "Take the medallion and move forward",
+        "Next Scene": "Scene_Final_Gate",
+        "Requierments": {
+          "Items": {
+            "Requier": {
+              "Take": {
+                "OldKey": true
+              }
+            },
+            "Give": {
+              "StarMedallion": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "Scene_Final_Gate": {
+    "Bubbles": {
+      "Bubble1": {
+        "Text": "You stand before the grand exit archway of the test script matrix.",
+        "Character": "Narrator"
+      }
+    },
+    "Choices": {
+      "Choice1": {
+        "Text": "Step through to trigger the standard game-ending routine",
+        "Next Scene": "Game_Over_Screen",
+        "Requierments": {}
+      }
+    },
+    "Ending": "Victory_Test_Pass"
+  }
+}

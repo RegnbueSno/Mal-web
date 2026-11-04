@@ -1,0 +1,7 @@
+{
+  "MysteriousStranger": {
+    "Image": "Regnbue.png",
+    "HiddenImage": "shadow_silhouette.png",
+    "RevealedByFlag": "StrangerRevealed"
+  }
+}
