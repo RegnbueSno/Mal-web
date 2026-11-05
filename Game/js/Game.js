@@ -443,9 +443,12 @@ async function game() {
     if (gameState.bubbleIndex === 0) {
         await hideGameScreen();
 
-        // 🟩 NEW: Destroy any leftover structural ending cards from previous playthrough tracks
+        // 🟩 FIX: Clean up both potential element node structures cleanly on first initialization run
         const lingeringCard = document.getElementById('runtimeEndingCard');
         if (lingeringCard) lingeringCard.remove();
+
+        const lingeringWrapper = document.getElementById('runtimeEndingWrapper');
+        if (lingeringWrapper) lingeringWrapper.remove();
 
         // Clear lingering typewriter cycles and reset ALL display slots to hidden baseline layers
         if (typewriterInterval) clearInterval(typewriterInterval);
@@ -663,6 +666,13 @@ function renderSceneChoices(scene, currentSceneKey) {
 
             updatedButton.addEventListener("click", async () => {
                 log('log', 'gameActions', "Ending acknowledged. Wiping story variables, preserving master profile records...");
+
+                // 🟩 FIX: Instantly kill background typewriter text intervals so they cannot append elements after exit!
+                if (typewriterInterval) {
+                    clearInterval(typewriterInterval);
+                    typewriterInterval = null;
+                }
+                isTypingActive = false;
 
                 // 1. Extract unlocked milestones so they survive item wipes
                 const preservedEndingsRecord = [...(gameState.Endings || [])];
