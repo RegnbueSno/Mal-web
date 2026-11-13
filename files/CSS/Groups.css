@@ -45,3 +45,7 @@
 @media (min-width:0px) {
     
 }
+
+Nexus img {
+    max-width:75%;
+}
