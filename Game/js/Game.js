@@ -135,9 +135,8 @@ const elems = {
         chooseStory: document.getElementById('chooseStory'),
         backToStart: document.getElementById('backToStart'),
 
-        // 🟩 FIX: Target the exact IDs from your new HTML structure!
-        testStoryBtn: document.getElementById('test'),        // Matches <button id="test">
-        regsStoryBtn: document.getElementById('RegsStory'),    // Matches <button id="RegsStory">
+        testStoryBtn: document.getElementById('test'),
+        regsStoryBtn: document.getElementById('RegsStory'),
 
         backupSave: document.getElementById('backupSaveBtn'),
 
